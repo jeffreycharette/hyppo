@@ -46,3 +46,122 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* ======== Page Wrapper ========= */
+
+.wrapper {
+	margin: 0 auto 0 auto;
+	width: 960px;
+	height: auto;
+}
+
+/* ======== Page Header ========= */
+
+header {
+	width: 100%;
+	height: 168px;
+	background: #9BB8AB;
+	-moz-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+	-ms-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+	box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+	z-index: 5;
+}
+
+#header_upper {
+	margin: 0 auto 0 auto;
+	width: 960px;
+	height: 130px;
+}
+
+#logo {
+	float: left;
+	margin-top: 28px;
+	width: 197px;
+	height: 85px;
+	text-indent: -9999px;
+	background: url('../images/logo.png') no-repeat;
+}
+
+#header_right {
+	float: right;
+	margin-top: 28px;
+	width: 760px;
+	height: 85px;
+}
+
+#header_contact {
+	width: 100%;
+	height: 42px;
+}
+
+#header_contact span {
+	display: block;
+	width: 100%;
+	height: auto;
+	text-align: right;
+}
+
+#header_lower {
+	width: 100%;
+	height: 38px;
+	background: url('../images/woodbar.jpg') repeat-x;
+	-moz-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+	-ms-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+
+#tagline {
+	width: 200px;
+	line-height: 38px;
+}
+
+/* ======== Navigation ========= */
+
+nav {
+	margin-top: 1px;
+	width: 100%;
+	height: 42px;
+}
+
+#nav_left {
+	float: right;
+	width: 9px;
+	height: 42px;
+	background: url('../images/nav_background_left.png') no-repeat;
+}
+
+nav ul {
+	float: right;
+	margin-top: 1px;
+	height: 38px;
+	background: #F2F2E1;
+	border: 1px solid #fff;
+	border-left: none;
+	list-style: none;
+}
+
+nav ul:before {
+	border: 1px solid #F2F2E1;
+	border-left: none;
+	z-index: 10;
+}
+
+nav ul li {
+	display: inline;
+	padding: 0 10px 0 10px;
+	font-size: 24px;
+	line-height: 38px;
+	font-weight: bold;
+}
+
+
+/* ======== Page Content ========= */
+
+#page_content {
+	background: #272926;
+	width: 100%;
+	height: 500px;
+}
+
