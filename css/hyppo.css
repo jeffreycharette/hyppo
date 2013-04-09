@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	background: #272926;
+	background: #272926 url('../images/background.jpg') center top repeat-y;
 	line-height: 1;
 }
 ol, ul {
@@ -166,11 +166,76 @@ nav ul li a, nav ul li a:visited {
 
 nav ul li a:hover { color: #5E8573;}
 
-
 /* ======== Page Content ========= */
 
 #page_content {
 	width: 100%;
 	height: 500px;
+}
+
+/* ======== Sidebar ========= */
+
+aside {
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+
+/* ======== Flavors Sidebar ========= */
+
+#flavors {
+	margin: 0 auto 0 auto;
+	width: 165px;
+	height: auto;
+}
+
+#flavors_top {
+	height: 24px;
+	background: url('../images/flavors_top.png') no-repeat;
+}
+
+#flavors_content {
+	height: auto;
+	background: url('../images/flavors_bg.png') repeat-y;
+}
+
+#flavors_content h1 {
+	margin-bottom: 10px;
+	width: 100%;
+	color: #494A4E;
+	font-size: 18px;
+	text-align: center;
+}
+
+#flavors_content span {
+	display: block;
+	width: 100%;
+	color: #494A4E;
+	font-size: 18px;
+	line-height: 0;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+#flavors_content p {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	color: #D67D27;
+	font-size: 18px;
+	text-align: center;
+}
+
+#flavors_bottom {
+	height: 28px;
+	background: url('../images/flavors_bottom.png') no-repeat;
+}
+
+/* ======== Page Content ========= */
+
+article {
+	float: right;
+	width: 735px;
+	height: 100%;
 }
 
