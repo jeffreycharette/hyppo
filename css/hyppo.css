@@ -20,7 +20,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/*font: inherit;*/
+	font-family: Arial, Helvetica, sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -29,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	background: #272926;
 	line-height: 1;
 }
 ol, ul {
@@ -61,10 +63,10 @@ header {
 	width: 100%;
 	height: 168px;
 	background: #9BB8AB;
-	-moz-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
-	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3), 0 5px 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3), 0 5px 4px rgba(0,0,0,0.5);
 	-ms-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
-	box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+	box-shadow: inset 0 5px 10px rgba(0,0,0,0.3), 0 4px 7px rgba(0,0,0,0.5);
 	z-index: 5;
 }
 
@@ -99,6 +101,7 @@ header {
 	display: block;
 	width: 100%;
 	height: auto;
+	color: #fff;
 	text-align: right;
 }
 
@@ -106,15 +109,13 @@ header {
 	width: 100%;
 	height: 38px;
 	background: url('../images/woodbar.jpg') repeat-x;
-	-moz-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-	-ms-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 #tagline {
 	width: 200px;
 	line-height: 38px;
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
 /* ======== Navigation ========= */
@@ -134,33 +135,41 @@ nav {
 
 nav ul {
 	float: right;
-	margin-top: 1px;
-	height: 38px;
+	margin-top: 2px;
+	height: 36px;
 	background: #F2F2E1;
 	border: 1px solid #fff;
 	border-left: none;
 	list-style: none;
-}
-
-nav ul:before {
-	border: 1px solid #F2F2E1;
-	border-left: none;
-	z-index: 10;
+	-moz-box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
+	-webkit-box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
+	-ms-box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
+	box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
 }
 
 nav ul li {
 	display: inline;
 	padding: 0 10px 0 10px;
 	font-size: 24px;
-	line-height: 38px;
+	height: 38px;
 	font-weight: bold;
 }
+
+nav ul li a, nav ul li a:visited {
+	width: auto;
+	height: 38px;
+	line-height: 38px;
+	color: #9BB8AB;
+	text-shadow: 1px 1px 0 #E8E7CA;
+	text-decoration: none;
+}
+
+nav ul li a:hover { color: #5E8573;}
 
 
 /* ======== Page Content ========= */
 
 #page_content {
-	background: #272926;
 	width: 100%;
 	height: 500px;
 }
