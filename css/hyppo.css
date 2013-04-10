@@ -105,7 +105,7 @@ header {
 	height: 130px;
 }
 
-#logo {
+#header_upper h1 {
 	float: left;
 	margin-top: 28px;
 	width: 197px;
@@ -114,19 +114,21 @@ header {
 	background: url('../images/logo.png') no-repeat;
 }
 
-#header_right {
+#header_upper div {
 	float: right;
 	margin-top: 28px;
 	width: 760px;
 	height: 85px;
 }
 
-#header_contact {
+#header_upper div div {
+	float: left;
+	margin: 0;
 	width: 100%;
 	height: 42px;
 }
 
-#header_contact span {
+#header_upper div div span {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -150,16 +152,18 @@ header {
 /* ======== Navigation ========= */
 
 nav {
+	float: left;
+	margin: 0;
+	padding 0;
 	margin-top: 1px;
 	width: 100%;
 	height: 42px;
 }
 
-#nav_left {
-	float: right;
-	width: 9px;
-	height: 42px;
-	background: url('../images/nav_background_left.png') no-repeat;
+nav ul::after {
+	position:absolute;
+	margin: -41px 0 0 -9px;
+	content: url('../images/nav_background_left.png');
 }
 
 nav ul {
@@ -231,17 +235,13 @@ article {
 	line-height: 18px;
 }
 
-.content_fourth {
-	float: left;
-	margin-right: 33px;
-	width: 150px;
-	height: auto;
-}
-
-.spacer_white {
+hr {
+	margin: 0;
+	padding: 0;
 	width: 100%;
 	height: 4px;
 	background: url('../images/dot_white.png') repeat-x;
+	border: none;
 }
 
 /* ======== Questions ========= */
@@ -268,46 +268,43 @@ article {
 	height: auto;
 }
 
-#flavors_top {
+#flavors div::before {
 	height: 24px;
-	background: url('../images/flavors_top.png') no-repeat;
+	content: url('../images/flavors_top.png');
 }
 
-#flavors_content {
+#flavors div {
 	height: auto;
 	background: url('../images/flavors_bg.png') repeat-y;
 }
 
-#flavors_content h1 {
-	margin-bottom: 10px;
-	width: 100%;
+#flavors h1 {
+	margin: 0 auto 10px auto;
+	width: 130px;
 	color: #494A4E;
 	font-size: 18px;
 	text-align: center;
 }
 
-#flavors_content span {
-	display: block;
-	width: 100%;
-	color: #494A4E;
-	font-size: 18px;
-	line-height: 0;
-	letter-spacing: 3px;
-	text-align: center;
+#flavors hr {
+	margin: 0 auto 0 auto;
+	width: 130px;
+	height: 4px;
+	background: url('../images/dot_dark.png') repeat-x;
 }
 
-#flavors_content p {
-	margin-top: 20px;
+#flavors p {
+	margin: 20px auto 0 auto;
 	padding-bottom: 20px;
-	width: 100%;
+	width: 140px;
 	color: #D67D27;
 	font-size: 18px;
 	text-align: center;
 }
 
-#flavors_bottom {
-	height: 28px;
-	background: url('../images/flavors_bottom.png') no-repeat;
+#flavors div:after {
+	position: absolute;
+	content: url('../images/flavors_bottom.png');
 }
 
 /* ======== Welcome ========= */
@@ -317,23 +314,24 @@ article {
 	height: auto;
 }
 
-#welcome_left {
+#welcome h1 {
 	float: left;
 	width: 200px;
 	height: 90px;
 	line-height: 90px;
 	color: #fff;
 	font-size: 40px;
+	font-weight: normal;
 	text-shadow: 1px 1px 2px #000;
 }
 
-#welcome_right {
+#welcome div {
 	float: right;
 	margin-top: 20px;
 	width: 500px;
 }
 
-#welcome_right p {
+#welcome div p {
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
@@ -350,22 +348,27 @@ article {
 	height: auto;
 }
 
-#video_left {
+#video div:first-child {
 	float: left;
 	width: 560px;
 	height: 313px;
 	background: #fff;
 }
 
-#video_right {
+#video div:last-child {
 	float: right;
 	width: 160px;
 	height: 313px;
 	background: #000;
 }
 
-#video_right h1 {
-	margin: 15px auto 0 auto;
+#video div:last-child hr {
+	margin: 0 auto 0 auto;
+	width: 120px;
+}
+
+#video div:last-child h1 {
+	margin: 15px auto 10px auto;
 	width: 120px;
 	height: auto;
 	font-size: 30px;
@@ -373,9 +376,22 @@ article {
 	text-transform: uppercase;
 }
 
+#video div:last-child p {
+	margin: 20px auto 0 auto;
+	width: 120px;
+	font-size: 13px;
+}
+
 /* ======== Homepage Content Bottom ========= */
 
-#homepage_bottom .content_fourth:last-child {
+#homepage_bottom div {
+	float: left;
+	margin-right: 33px;
+	width: 150px;
+	height: auto;
+}
+
+#homepage_bottom div:last-child {
 	margin-right: 0;
 	width: 170px;
 }
