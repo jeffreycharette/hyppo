@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	background: #272926 url('../images/background.jpg') center top repeat-y;
+	color: #fff;
 	line-height: 1;
 }
 ol, ul {
@@ -48,6 +49,34 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+a, a:visited {
+	color: #D67D27;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 
 /* ======== Page Wrapper ========= */
 
@@ -164,13 +193,17 @@ nav ul li a, nav ul li a:visited {
 	text-decoration: none;
 }
 
-nav ul li a:hover { color: #5E8573;}
+nav ul li a:hover { color: #5E8573; text-decoration: none; }
+
+/* ============================================
+===  General Styling
+=============================================== */
 
 /* ======== Page Content ========= */
 
 #page_content {
 	width: 100%;
-	height: 500px;
+	height: auto;
 }
 
 /* ======== Sidebar ========= */
@@ -179,6 +212,52 @@ aside {
 	float: left;
 	width: 200px;
 	height: 100%;
+}
+
+/* ======== Page Content ========= */
+
+article {
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+.content_text {
+	margin-bottom: 20px;
+	width: 100%;
+	height: auto;
+	color: #fff;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.content_fourth {
+	float: left;
+	margin-right: 33px;
+	width: 150px;
+	height: auto;
+}
+
+.spacer_white {
+	width: 100%;
+	height: 4px;
+	background: url('../images/dot_white.png') repeat-x;
+}
+
+/* ======== Questions ========= */
+
+#questions {
+	font-size: 11px;
+	text-align: center;
+}
+
+/* ============================================
+===  Homepage Styling
+=============================================== */
+
+#homepage_content {
+	float: right;
+	width: 720px;
 }
 
 /* ======== Flavors Sidebar ========= */
@@ -231,11 +310,105 @@ aside {
 	background: url('../images/flavors_bottom.png') no-repeat;
 }
 
-/* ======== Page Content ========= */
+/* ======== Welcome ========= */
 
-article {
-	float: right;
-	width: 735px;
-	height: 100%;
+#welcome {
+	width: 100%;
+	height: auto;
 }
 
+#welcome_left {
+	float: left;
+	width: 200px;
+	height: 90px;
+	line-height: 90px;
+	color: #fff;
+	font-size: 40px;
+	text-shadow: 1px 1px 2px #000;
+}
+
+#welcome_right {
+	float: right;
+	margin-top: 20px;
+	width: 500px;
+}
+
+#welcome_right p {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: #9BB8AB;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* ======== Video ========= */
+
+#video {
+	margin-bottom: 20px;
+	width: 100%;
+	height: auto;
+}
+
+#video_left {
+	float: left;
+	width: 560px;
+	height: 313px;
+	background: #fff;
+}
+
+#video_right {
+	float: right;
+	width: 160px;
+	height: 313px;
+	background: #000;
+}
+
+#video_right h1 {
+	margin: 15px auto 0 auto;
+	width: 120px;
+	height: auto;
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+/* ======== Homepage Content Bottom ========= */
+
+#homepage_bottom .content_fourth:last-child {
+	margin-right: 0;
+	width: 170px;
+}
+
+#homepage_bottom h4 {
+	padding-top: 10px;
+	color: #9BB8AB;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+#homepage_bottom .more {
+	padding-right: 30px;
+	background: url('../images/more.png') right top no-repeat;
+}
+
+#homepage_bottom p {
+	margin-top: 10px;
+}
+
+/* ============================================
+===  Footer
+=============================================== */
+
+footer {
+	margin-top: 10px;
+	width: 100%;
+	height: 38px;
+	background: url('../images/woodbar.jpg') repeat-x;
+}
+
+footer .wrapper {
+	line-height: 38px;
+	text-align: center;
+}
