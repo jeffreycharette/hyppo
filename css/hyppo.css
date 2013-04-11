@@ -527,3 +527,125 @@ footer .wrapper {
 #dimare p {
 	width: 620px;
 }
+
+/* ============================================
+===  Our Foods Page
+=============================================== */
+
+#ourfoods hr {
+	margin-bottom: 15px;
+}
+
+#ourfoods h4 {
+	float: left;
+	margin-top: 0;
+	width: 100%;
+	height: 27px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+#ourfoods a {
+	text-transform: uppercase;
+}
+
+#ourfoods section p {
+	float: left;
+}
+
+#ourfoods section p span {
+	margin: 0 10px 0 10px;
+}
+
+#ourfoods section div {
+	float: right;
+	width: 300px;
+	height: auto;
+}
+
+#ourfoods section div h4, #ourfoods section div ul {
+	float: left;
+}
+
+#ourfoods section div ul {
+	width: 140px;
+}
+
+#ourfoods section div ul:last-child {
+	float: right;
+}
+
+/* ======== Pops Section ========= */
+
+#pops {
+	min-height: 290px;
+	background: url('../images/hyppo_pop.png') -10px 50px no-repeat;
+}
+
+#pops p {
+	margin-left: 210px;
+	width: 390px;
+}
+
+#pops h4 {
+	background: url('../images/foods_banner_orange.png') no-repeat;
+}
+
+/* ======== Ice Cream Section ========= */
+
+#icecream p {
+	width: 600px;
+}
+
+#icecream h4 {
+	background: url('../images/foods_banner_purple.png') no-repeat;
+}
+
+/* ======== Sandwiches & Salads Section ========= */
+
+#sandsalads p {
+	width: 600px;
+}
+
+#sandsalads div {
+	position: relative;
+	min-height: 120px;
+	background: url('../images/hyppo_cafe.png') center top no-repeat;
+}
+
+#sandsalads span {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+#sandsalads span a, #sandsalads span a:visited {
+	padding-right: 5px;
+	color: #F2F2E1;
+	text-decoration: none;
+}
+
+#sandsalads span a::after {
+	position: absolute;
+	content: url('../images/more_white.png');
+}
+
+#sandsalads span a:hover {
+	text-decoration: underline;
+}
+
+/* ======== Coffee & Teas Section ========= */
+
+#coffeeteas p {
+	width: 600px;
+}
+
+#coffeeteas h4 {
+	background: url('../images/foods_banner_brown.png') no-repeat;
+}
