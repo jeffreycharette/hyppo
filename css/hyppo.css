@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	background: #272926 url('../images/background.jpg') center top repeat-y;
+	background: #272926 url('../images/background.jpg') center top repeat-y fixed;
 	color: #fff;
 	line-height: 1;
 }
