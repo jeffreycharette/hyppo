@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -81,6 +83,12 @@ a:hover {
 	margin-bottom: 0 !important;
 }
 
+/* ======== Icon Font ========= */
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
 
 /* ======== Page Wrapper ========= */
 
@@ -164,15 +172,11 @@ nav {
 	height: 42px;
 }
 
-nav ul::after {
-	position:absolute;
-	margin: -41px 0 0 -9px;
-	content: url('../images/nav_background_left.png');
-}
-
 nav ul {
+	position: relative;
 	float: right;
 	margin-top: 2px;
+	width: 740px;
 	height: 36px;
 	background: #F2F2E1;
 	border: 1px solid #fff;
@@ -184,12 +188,20 @@ nav ul {
 	box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
 }
 
+nav ul::after {
+	position:absolute;
+	left: -9px;
+	top: -3px;
+	content: url('../images/nav_background_left.png');
+}
+
 nav ul li {
 	position: relative;
 	display: inline;
+	float: left;
 	padding: 0 10px 0 10px;
 	font-size: 24px;
-	height: 38px;
+	height: 36px;
 	font-weight: bold;
 }
 
@@ -211,7 +223,25 @@ nav ul li a:hover::after {
 	content: url('../images/menu_hover.png');
 	position: absolute;
 	left: 45%;
-	bottom: -16px;
+	bottom: -13px;
+}
+
+nav ul .findus a:hover::after {
+	content: "";
+}
+
+nav .findus {
+	float: right;
+	border-left: 1px solid #fff;
+	-moz-box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+	-webkit-box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+	-ms-box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+	box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+
+}
+
+nav .findus a {
+	padding: 0 15px 0 15px;
 }
 
 /* ============================================
@@ -308,6 +338,7 @@ section p {
 	color: #fff;
 	font-size: 14px;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 #breadcrumbs ul li a:hover {
@@ -392,7 +423,6 @@ section p {
 	color: #fff;
 	font-size: 40px;
 	font-weight: normal;
-	text-shadow: 1px 1px 2px #000;
 }
 
 #welcome div {
@@ -423,7 +453,7 @@ section p {
 	float: left;
 	width: 560px;
 	height: 313px;
-	background: #fff;
+	background: #333;
 }
 
 #video div:last-child {
