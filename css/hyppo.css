@@ -36,6 +36,9 @@ body {
 	color: #fff;
 	line-height: 1;
 }
+body:after {
+	background: url('../images/chalk_bg.png') center top no-repeat;
+}
 ol, ul {
 	list-style: none;
 }
@@ -349,12 +352,18 @@ section p {
 	position: absolute;
 	left: -200px;
 	top: 200px;
+	width: 205px;
+	height: 355px;
+	background: url('../images/chalkleft.png') no-repeat;
 }
 
 #chalkright {
 	position: absolute;
 	right: -200px;
 	top: 0;
+	width: 199px;
+	height: 567px;
+	background: url('../images/chalkright.png') no-repeat;
 }
 
 /* ======== Questions ========= */
