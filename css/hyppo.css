@@ -107,6 +107,7 @@ a:hover {
 /* ======== Page Wrapper ========= */
 
 .wrapper {
+	position: relative;
 	margin: 0 auto 0 auto;
 	width: 960px;
 	height: auto;
@@ -333,6 +334,20 @@ hr {
 
 section p {
 	margin-bottom: 15px;
+}
+
+/* ======== Chalk Images ========= */
+
+#chalkleft {
+	position: absolute;
+	left: -200px;
+	top: 200px;
+}
+
+#chalkright {
+	position: absolute;
+	right: -200px;
+	top: 0;
 }
 
 /* ======== Questions ========= */
@@ -808,6 +823,16 @@ footer .wrapper {
 	width: 540px;
 	height: 530px;
 	background: #fff;
+}
+
+#findus div a, #findus div a:visited {
+	color: #eee;
+	text-decoration: none;
+	text-transform: uppercase
+}
+
+#findus div a:hover {
+	text-decoration: underline;
 }
 
 #moreinfo h4 {
