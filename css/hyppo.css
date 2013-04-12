@@ -22,8 +22,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	/*font: inherit;*/
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Coustard', serif;
+	font-weight: 400;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -104,14 +104,14 @@ a:hover {
 
 @keyframes findus
 {
-	from { opacity: 0; top: -21px; }
-	to { opacity: 100; top: -17px; }
+	from { opacity: 0; top: -26px; }
+	to { opacity: 100; top: -16px; }
 }
 
 @-webkit-keyframes findus /* Safari and Chrome */
 {
-	from { opacity: 0; top: -21px; }
-	to { opacity: 100; top: -17px; }
+	from { opacity: 0; top: -26px; }
+	to { opacity: 100; top: -16px; }
 }
 
 /* ======== Page Wrapper ========= */
@@ -163,6 +163,8 @@ header {
 	margin-top: 28px;
 	width: 760px;
 	height: 85px;
+	font-size: 13px;
+	line-height: 16px;
 }
 
 #header_upper div div {
@@ -189,6 +191,8 @@ header {
 #tagline {
 	width: 200px;
 	line-height: 38px;
+	font-family: 'Satisfy', cursive;
+	font-size: 18px;
 	color: #fff;
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
@@ -231,17 +235,25 @@ nav ul li {
 	position: relative;
 	display: inline;
 	float: left;
-	padding: 0 10px 0 10px;
-	font-size: 24px;
+	padding: 0 15px 0 15px;
+	font-size: 31px;
 	height: 36px;
+	letter-spacing: 1px;
 	font-weight: bold;
+}
+
+nav ul li:first-child {
+	margin-left: 20px;
 }
 
 nav ul li a, nav ul li a:visited {
 	width: auto;
-	height: 38px;
-	line-height: 38px;
+	height: 35px;
+	line-height: 35px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: bold;
 	color: #9BB8AB;
+	text-transform: uppercase;
 	text-shadow: 1px 1px 0 #E8E7CA;
 	text-decoration: none;
 }
@@ -255,7 +267,7 @@ nav ul li a:hover::after {
 	content: url('../images/menu_hover.png');
 	position: absolute;
 	left: 45%;
-	bottom: -13px;
+	bottom: -8px;
 }
 
 nav ul .findus a:hover::after {
@@ -274,8 +286,8 @@ nav .findus {
 
 nav .findus::after {
 	position: absolute;
-	left: 6px;
-	top: -17px;
+	left: 12px;
+	top: -20px;
 	content: url('../images/findus.png');
 	opacity: 0;
 }
@@ -465,7 +477,9 @@ section p {
 	padding-bottom: 20px;
 	width: 140px;
 	color: #D67D27;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 18px;
+	line-height: 24px;
 	text-align: center;
 }
 
@@ -487,15 +501,16 @@ section p {
 	width: 200px;
 	height: 90px;
 	line-height: 90px;
+	font-family: 'Satisfy', cursive;
 	color: #fff;
-	font-size: 40px;
+	font-size: 54px;
 	font-weight: normal;
 }
 
 #welcome div {
 	float: right;
 	margin-top: 20px;
-	width: 500px;
+	width: 520px;
 }
 
 #welcome div p {
@@ -504,6 +519,8 @@ section p {
 	height: 40px;
 	line-height: 40px;
 	color: #9BB8AB;
+	font-weight: 18px;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -545,10 +562,15 @@ section p {
 }
 
 #video div:last-child p {
-	margin: 20px auto 0 auto;
+	margin: 15px auto 0 auto;
 	width: 120px;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	line-height: 15px;
+}
+
+#video div:last-child a, #video div:last-child a:visited {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ======== Homepage Content Bottom ========= */
@@ -580,13 +602,19 @@ section p {
 }
 
 #homepage_bottom p {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 14px;
 	margin-top: 10px;
-	margin-bottom: 0;
+	margin-bottom: 5px;
 }
 
 /* ============================================
 ===  Story Page
 =============================================== */
+
+#story h1 {
+	font-family: 'Satisfy', cursive;
+}
 
 #story_intro {
 	height: 144px;
@@ -615,6 +643,10 @@ section p {
 
 #ourfoods hr {
 	margin-bottom: 15px;
+}
+
+#ourfoods h1 {
+	font-family: 'Satisfy', cursive;
 }
 
 #ourfoods h4 {
@@ -735,6 +767,10 @@ section p {
 ===  Menus Page
 =============================================== */
 
+#menus h1 {
+	font-family: 'Satisfy', cursive;
+}
+
 #menus hr {
 	margin-bottom: 15px;
 }
@@ -761,6 +797,7 @@ section p {
 	margin-bottom: 15px;
 	color: #9BB8AB;
 	font-size: 18px;
+	font-weight: 900;
 	text-transform: uppercase;
 }
 
@@ -781,6 +818,10 @@ section p {
 /* ============================================
 ===  Find Us Page
 =============================================== */
+
+#find-us h1 {
+	font-family: 'Satisfy', cursive;
+}
 
 #find-us h4, #find-us h5, #find-us p {
 	width: 380px;
