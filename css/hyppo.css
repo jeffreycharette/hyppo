@@ -36,16 +36,6 @@ body {
 	color: #fff;
 	line-height: 1;
 }
-body:after {
-	content: url('../images/chalk_bg.png');
-	position: fixed;
-	top: 200px;
-	z-index: -1;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	width: 500px;
-}
 ol, ul {
 	list-style: none;
 }
