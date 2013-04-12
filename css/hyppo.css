@@ -90,6 +90,20 @@ a:hover {
   font-family: 'entypo', sans-serif;
 }
 
+/* ======== Animation ========= */
+
+@keyframes findus
+{
+	from { opacity: 0; top: -21px; }
+	to { opacity: 100; top: -17px; }
+}
+
+@-webkit-keyframes findus /* Safari and Chrome */
+{
+	from { opacity: 0; top: -21px; }
+	to { opacity: 100; top: -17px; }
+}
+
 /* ======== Page Wrapper ========= */
 
 .wrapper {
@@ -238,6 +252,21 @@ nav .findus {
 	-ms-box-shadow: -1px 0 0 rgba(100,100,100,0.1);
 	box-shadow: -1px 0 0 rgba(100,100,100,0.1);
 
+}
+
+nav .findus::after {
+	position: absolute;
+	left: 6px;
+	top: -17px;
+	content: url('../images/findus.png');
+	opacity: 0;
+}
+
+nav .findus:hover::after {
+	animation: findus 0.2s;
+	animation-fill-mode: forwards;
+	-webkit-animation: findus 0.2s; /* Safari and Chrome */
+	-webkit-animation-fill-mode: forwards;
 }
 
 nav .findus a {
