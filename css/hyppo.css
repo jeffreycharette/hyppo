@@ -649,3 +649,116 @@ footer .wrapper {
 #coffeeteas h4 {
 	background: url('../images/foods_banner_brown.png') no-repeat;
 }
+
+/* ============================================
+===  Menus Page
+=============================================== */
+
+#menus hr {
+	margin-bottom: 15px;
+}
+
+#menus section:not(#breadcrumbs) ul {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+#menus section:not(#breadcrumbs) ul li {
+	width: 450px;
+	height: auto;
+}
+
+#menus section:not(#breadcrumbs) ul li:first-child {
+	float: left;
+}
+
+#menus section:not(#breadcrumbs) ul li:last-child {
+	float: right;
+}
+
+#menus h5 {
+	margin-bottom: 15px;
+	color: #9BB8AB;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+#menus section:not(#breadcrumbs) span {
+	display: block;
+	width: 100%;
+	color: #D67D27;
+}
+
+#menus section:not(#breadcrumbs) p {
+	margin-bottom: 15px;
+}
+
+#menus .clearmargin {
+	margin-bottom: 0;
+}
+
+/* ============================================
+===  Find Us Page
+=============================================== */
+
+#find-us h4, #find-us h5, #find-us p {
+	width: 380px;
+}
+
+#find-us hr {
+	margin-bottom: 15px;
+}
+
+#find-us a, #find-us a:visited {
+	text-transform: inherit;
+}
+
+#findus h5, #findus h4 {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	width: auto;
+	color: #9BB8AB;
+	font-size: 18px;
+}
+
+#findus h4:after {
+	position: absolute;
+	right: -20px;
+	top: -4px;
+	content: url('../images/map_marker_small_blue.png');
+}
+
+#findus .orange {
+	color: #D67D27;
+}
+
+#findus .orange::after {
+	position: absolute;
+	right: -20px;
+	top: -4px;
+	content: url('../images/map_marker_small_orange.png');
+}
+
+#findus p {
+	margin-bottom: 20px;
+}
+
+#findus div {
+	float: right;
+	width: 540px;
+	height: 530px;
+	background: #fff;
+}
+
+#moreinfo h4 {
+	margin-bottom: 0;
+	color: #D67D27;
+}
+
+#moreinfo p {
+	width: 100%;
+	color: #fff;
+	font-size: 13px;
+	font-weight: normal;
+}
