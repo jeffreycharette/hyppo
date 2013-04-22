@@ -848,10 +848,11 @@ section p {
 	width: auto;
 	color: #9BB8AB;
 	font-size: 18px;
+	text-transform: uppercase;
 }
 
 #findus h4 {
-	text-transform: uppercase;
+	color: #D67D27;
 }
 
 #findus h4:after {
