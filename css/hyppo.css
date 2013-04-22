@@ -32,7 +32,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	background: #272926 url('../images/background.jpg') center top repeat-y fixed;
+	background-color: #272926;
+	background-image: url('../images/chalk_bg.png'), url('../images/background.jpg');
+	background-position: center 185px, center top;
+	background-repeat: no-repeat, repeat-y;
+	background-attachment: scroll, fixed;
 	color: #fff;
 	line-height: 1;
 }
@@ -462,10 +466,15 @@ section p {
 	background: url('../images/dot_dark.png') repeat-x;
 }
 
-#flavors p {
+#flavors ul {
 	margin: 20px auto 0 auto;
 	padding-bottom: 20px;
 	width: 140px;
+	list-style: none;
+}
+
+#flavors ul li {
+	width: 100%;
 	color: #D67D27;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 18px;
@@ -620,7 +629,8 @@ section p {
 }
 
 #dimare {
-	background: url('../images/stephen_dimare.png') right top no-repeat;
+	min-height: 335px;
+	background: url('../images/stephen_dimare.png') right 10px no-repeat;
 }
 
 #dimare p {
@@ -674,11 +684,17 @@ section p {
 }
 
 #ourfoods section div ul {
-	width: 140px;
+	width: 145px;
 }
 
 #ourfoods section div ul:last-child {
 	float: right;
+}
+
+#ourfoods section div li {
+	margin-bottom: 5px;
+	font-size: 11px;
+	font-weight: normal;
 }
 
 /* ======== Pops Section ========= */
@@ -834,6 +850,10 @@ section p {
 	font-size: 18px;
 }
 
+#findus h4 {
+	text-transform: uppercase;
+}
+
 #findus h4:after {
 	position: absolute;
 	right: -20px;
@@ -905,4 +925,23 @@ footer div {
 	display: block;
 	width: auto;
 	height: auto;
+}
+
+#follow a {
+	display: block;
+	margin: 0 auto 0 auto;
+	width: 200px;
+	height: 30px;
+	color: #889FB7;
+	text-decoration: none;
+}
+
+#follow a img {
+	float: left;
+}
+
+#follow a span {
+	display: block;
+	float: right;
+	line-height: 35px;
 }
