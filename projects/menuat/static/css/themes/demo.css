@@ -1,0 +1,228 @@
+/*-------------------------------------------------------
+-- Fonts
+-------------------------------------------------------*/
+@font-face {
+  font-family: 'Amaranth';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Amaranth'), url(/fonts/RvdVaxHTnYbJDko8dLi4znYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: #000000;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #CE2027;
+	font-family: 'Amaranth', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.container-fluid {
+	padding: 15px;
+}
+
+/*-------------------------------------------------------
+-- Layout
+-------------------------------------------------------*/
+
+#bg-slideshow {
+	z-index: -2;
+	background-color: #000000;
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	overflow: hidden;
+	opacity: 1;
+}
+
+#bg-slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+
+.wrapper {
+	background: #FEFED5;
+	display: block;
+	width: 100%;
+	padding-bottom: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-o-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  margin: 0 0 19px 0;
+}
+.logo {
+	background: url('/img/Sunray_Cinema.gif') no-repeat top center;
+	border: none;
+	box-shadow: none;
+	margin: 0 auto;
+	text-align: center;
+	-webkit-box-shadow: none;
+	width: 355px;
+	height: 224px;
+	text-indent: -9009px;
+}
+.logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.wrapper:not(:first-child) {
+	margin-top: 11px;
+}
+
+.wrapper ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wrapper ul:not(.category) {
+	padding: 7px 0 0 0;
+}
+.wrapper ul li {
+	line-height: 130%;
+}
+
+.category-title h2, .heading h3, h2.blue  {
+	font-weight: 500;
+	color: #CE2027;
+	font-size: 28px;
+	letter-spacing: 7px;
+	line-height: 1em;
+	margin-bottom: 0;
+	margin-top: 9px;
+	text-transform: uppercase;
+	line-height: 50px;
+}
+h2 {
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 57px;
+	text-align: center;
+	margin-top: 47px;
+	margin-bottom: 0;
+	margin-right: 10px;
+	font-family: 'Amaranth', sans-serif;
+}
+.heading h3 {
+	font-size: 21px;
+}
+.category-title h2 img {
+	bottom: 5px;
+	margin-left: 13px;
+	position: absolute;
+}
+hr {
+	margin: 0 15px 5px 15px;
+	height: 2px;
+	border: none;
+	background: #FFFFFF;
+}
+.amount, .green, .currency {
+	color: #B1D9A3;
+}
+.currency {
+	display: none;
+}
+.heading, .price {
+	text-align: right;
+	white-space: nowrap;
+}
+.description {
+	display: none;
+}
+
+/*-------------------------------------------------------
+-- footer
+-------------------------------------------------------*/
+.foot {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/*-------------------------------------------------------
+-- Overrides
+-------------------------------------------------------*/
+.red, .push, .push li, .push li h2, .push li h3 {
+	color: #CE2027;
+}
+small {
+	font-size: 75%;
+}
+.row-fluid {
+	column-gap: 11px;
+	-moz-column-gap: 11px;
+	-webkit-column-gap: 11px;
+}
+
+@media (min-width: 1279px) {
+	body {
+		padding-top: 10px;
+	}
+	.row-fluid {
+		column-count: 6;
+		-webkit-column-count: 6;
+		column-gap: 20px;
+		-webkit-column-gap: 20px;
+		column-gap: ;
+		min-height: 1000px;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.title, .processing > .row {
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.navbar {
+		display: none;
+	}
+}
+@media (max-width: 1279px) {
+	.container-fluid, .container-fluid .row-fluid {
+		padding: 10px !important;
+	}
+	.row-fluid {
+		height: auto !important;
+		width: auto !important;
+	}
+}
+@media screen and (max-width: 480px) {
+	body, .description {
+		font-size: 16px;
+		font-weight: normal;
+	}
+	.prices {
+		min-height: auto;
+	}
+	.category-title h2, .heading h3  {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	h2.blue, .count1 h3, .count1, .count2 h3, .count2, .count3 h3, .count3, .count5 h3, .count5, .count4 h3, .count4, .showtime h3, .showtimes {
+		font-size: 30px !important;
+		margin: 15px 0 !important;
+	}
+}

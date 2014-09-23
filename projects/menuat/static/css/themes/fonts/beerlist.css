@@ -1,0 +1,15 @@
+/*-------------------------------------------------------
+-- Fonts
+-------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.heading dt, .heading dd, .category-title h2, .heading h3, h2.yellow, h3  {
+	font-family: 'Walter Turncoat', sans-serif;
+}
+.event {
+	font-family: Georgia, serif;
+}

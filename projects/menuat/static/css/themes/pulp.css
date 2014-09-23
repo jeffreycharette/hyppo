@@ -1,0 +1,296 @@
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: black;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.container-fluid {
+	padding: 15px;
+}
+
+/*-------------------------------------------------------
+-- Layout
+-------------------------------------------------------*/
+
+#bg-slideshow {
+	z-index: -2;
+	background-color: #000000;
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	overflow: hidden;
+	opacity: 1;
+}
+
+#bg-slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+
+.wrapper {
+	background: transparent url('/img/pulp/bg-border-wavy-white.png') repeat-x bottom center;
+	display: block;
+	width: 100%;
+	padding-bottom: 15px;
+}
+.logo {
+	background: none;
+	border: none;
+	box-shadow: none;
+	text-align: center;
+	-webkit-box-shadow: none;
+	padding-top: 0 !important;
+}
+.logo img {
+	background: none;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	width: 100%;
+}
+.wrapper {
+	padding-top: 7px;
+}
+
+.wrapper ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.wrapper ul li {
+	line-height: 120%;
+}
+
+.category-title h2, .heading h3  {
+	font-weight: 400;
+	color: #F8A431;
+	font-size: 50px;
+	line-height: 1em;
+	margin-bottom: 0;
+	margin-top: 9px;
+	line-height: 50px;
+}
+.category-title h2 {
+	margin-bottom: 15px;
+	margin-left: -3px;
+}
+.heading h3 {
+	color: #ffffff;
+}
+.category-title h2 img {
+	bottom: 5px;
+	margin-left: 13px;
+	position: absolute;
+}
+.category-title h2:after {
+	display:inline-block;
+	content: "";
+	width: 43px;
+	height: 45px;
+	position: absolute;
+	background: transparent url('/img/pulp/bg-splash.png') no-repeat 7px 13px;
+}
+.legendrow, hr {
+	display: none;
+}
+.amount, .orange, .currency, .price {
+	color: #F8A431;
+}
+.currency {
+	display: none;
+}
+.heading h3, .title, .heading, .price {
+	font-size: 26px;
+}
+.heading, .price {
+	text-align: right;
+	white-space: nowrap;
+}
+.description {
+	color: #ffffff !important;
+	margin-top: -2px;
+}
+
+/*-------------------------------------------------------
+-- Event
+-------------------------------------------------------*/
+.event .image {
+	max-height: 280px;
+	min-height: 100px;
+}
+.event img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.event {
+	font-size: 41px;
+}
+.event .row {
+	margin-top: 25px;
+	padding-top: 25px !important;
+}
+.wrapper .event ul:not(.category) {
+	padding-top: 25px;
+}
+
+/*-------------------------------------------------------
+-- Overrides
+-------------------------------------------------------*/
+.red, .push, .push li, .push li h2, .push li h3 {
+	color: #F8A431;
+}
+small {
+	font-size: 75%;
+}
+.row-fluid {
+	column-gap: 11px;
+	-moz-column-gap: 11px;
+	-webkit-column-gap: 11px;
+}
+.smoothies .processing, .freshpremiumjuices .processing, .extras .processing {
+	display: block;
+	font-size: 14px;
+	column-count: 2;
+	-webkit-column-count: 2;
+}
+.root {padding-top: 2px;}
+
+@media (min-width: 720px) {
+	body {
+		padding-top: 10px;
+	}
+	.row-fluid {
+		column-count: 1;
+		-webkit-column-count: 1;
+		column-gap: 20px;
+		-webkit-column-gap: 20px;
+		min-height: 1280px;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.title, .processing > .row {
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.navbar {
+		display: none;
+	}
+}
+@media (max-width: 719px) {
+	.container-fluid, .container-fluid .row-fluid {
+		padding: 10px !important;
+	}
+	.row-fluid {
+		height: auto !important;
+		width: auto !important;
+	}
+}
+/*@media screen and (min-width: 1270px) and (max-width: 1919px) {
+	.row-fluid {
+		column-count: 2;
+		-webkit-column-count: 2;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+}*/
+@media screen and (max-width: 480px) {
+	body, .description {
+		font-size: 16px;
+		font-weight: normal;
+	}
+	.category-title h2, .heading h3  {
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.heading h3, .title, .heading, .price {
+		font-size: 20px;
+	}
+	.smoothies .processing, .freshpremiumjuices .processing, .extras .processing {
+		display: block;
+		font-size: 12px;
+		column-count: 1;
+		-webkit-column-count: 1;
+	}
+	.root {
+		padding: 4px 0;
+	}
+}
+
+.organicbeer, .organicwine {
+	width: 50%;
+	float: left;
+}
+.freshpremiumjuices .processing .col-xs-10 {
+	width: 75%;
+}
+.freshpremiumjuices .processing .col-xs-8 {
+	width: 50%;
+}
+.freshpremiumjuices .processing .col-xs-2 {
+	width: 25%;
+}
+.flip {
+	padding-top: 0 !important;
+}
+.flip .container-fluid {
+	padding: 0;
+}
+.flip .row-fluid {
+	padding: 0 !important;
+}
+
+.coffee {
+	background-color: transparent;
+	background:
+		url('/img/pulp/bg-fruit-1.png') no-repeat top right,
+		url('/img/pulp/bg-border-wavy-white.png') repeat-x bottom center;
+}
+.organicbeer {
+	background-color: transparent;
+	background: 
+		url('/img/pulp/bg-border-wavy-white-right.png') repeat-y top right,
+		url('/img/pulp/bg-fruit-5.png') no-repeat 50% 100%;
+}
+.organicwine {
+	background: none;
+}
+.smoothies {
+	background-color: transparent;
+	background:
+		url('/img/pulp/bg-fruit-3.png') no-repeat top center,
+		url('/img/pulp/bg-border-wavy-white.png') repeat-x bottom center;
+	clear: both;
+	padding-bottom: 0;
+}
+.supersmoothies {
+	background-color: transparent;
+	background:
+		url('/img/pulp/bg-fruit-4.png') no-repeat 80% 0%,
+		url('/img/pulp/bg-border-wavy-white.png') repeat-x bottom center;
+}
+.extras {
+	background: none;
+}

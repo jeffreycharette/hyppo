@@ -1,0 +1,8 @@
+<div>
+{{#if name}}<h1>{{name}}</h1>{{/if}}
+{{#if created_at}}Date: {{created_at}}<br />{{/if}}
+{{#if subject}}Subject: {{subject}}<br />{{/if}}
+{{#if phone}}Phone: {{phone}}<br />{{/if}}
+{{#if email}}Email: <a href="mailto:{{email}}?subject={{subject}}">{{email}}</a><br />{{/if}}
+{{#if message}}Message: {{message}}{{/if}}
+</div>

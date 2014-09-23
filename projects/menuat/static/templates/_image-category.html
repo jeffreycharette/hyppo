@@ -1,0 +1,16 @@
+{{#if hide}}{{{pin}}{{/if}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}} {{classname}}" style="padding:{{spacing}}">
+	<ul class="row category{{#if push}} push{{/if}}">
+		{{#if category}}
+	    <li class="col-xs-12 category-title">
+				{{{pin}}}
+	    	{{#if assets}}
+					{{#each assets}}
+						<img class="centered" src="{{basePath}}/{{name}}" />
+					{{/each}}
+				{{/if}}
+	    </li>
+		{{/if}}
+	</ul>
+	{{{items}}}
+</div>

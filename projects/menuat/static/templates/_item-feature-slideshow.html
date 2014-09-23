@@ -1,0 +1,17 @@
+{{#if hide}}{{{pin}}{{/if}}
+<span id="{{_id}}" class="root{{#if hide}} hide{{/if}}{{#if push}} push{{/if}}">
+	<input class="schedule" type="hidden" value="{{schedule}}">
+	<ul class="row">
+	  <li class="col-md-4 description italic">
+		{{#if title}}<div class="message-box">{{{title}}}<div class="triangle"></div></div>{{/if}}
+		{{#if description}}{{{description}}}{{/if}}
+	  </li>
+		<li class="col-md-8 legend cycle-slideshow">
+			{{#if legend}}
+			{{#each legend}}
+			<img src="{{basePath}}/{{name}}" />
+			{{/each}}
+			{{/if}}
+		</li>
+	</ul>
+</span>

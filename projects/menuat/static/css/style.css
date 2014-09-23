@@ -1,0 +1,828 @@
+﻿/*!
+ * Flat & Scroll - Multipurpose One Page Theme
+ *
+ * Copyright 2013 
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Created by: Carlos Alvarez
+ * URL: http://www.basicoh.com
+ * Designed and built based on Twitter Bootstrap.
+ * Tags: multipurpose, agency theme, one page, single page, responsive, green, flat */
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic);
+
+/* Global */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+	background: #ecf0f1;
+  color: #2d2d2d;
+  font-family: 'Lato-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px; font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 22px;
+  /* margin-top: 60px; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato-Light", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+	text-shadow: 2px 1px 0px rgba(0, 0, 0, .2);
+}
+
+p {
+    margin: 0 10px 10px 0;
+}
+
+a {
+	color: #E15930;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #E15930;
+	text-decoration: none;
+}
+
+
+/* Navigation */
+
+#logo {
+    float: left;
+    margin: 12px 0 12px 18px;
+}
+
+#logo a {
+	display: block;
+}
+.kookaburra-logo {
+	display: block;
+	margin: 0 auto;
+}
+
+#sidebar {
+	background-color: #E15930;
+    height: 120%;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    z-index: 2;
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li {
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 22px;
+	filter: alpha(opacity=60);
+	font-size: 16px; font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 100;
+	opacity: .6;
+	padding: 8px 0 8px 14px;
+	text-transform: uppercase;
+	text-shadow: 0 -1px 1px rgba(197, 34, 24, 1);
+	width: 70%;
+}
+
+#nav ul li a, .btn-inverse a, .btn-inverse a:hover, .btn-inverse a:focus   {
+	color: #FFFFFF;
+}
+
+#nav ul li.active, #nav ul li:hover, #nav ul li a.active, #nav ul li a:hover {
+	filter: alpha(opacity=100);
+	opacity: 1;
+	text-shadow: 0 -1px 1px rgba(137, 0, 0, 1);
+}
+
+#nav ul li.last {
+    padding-right: 0px;
+}
+
+#nav li span {
+	display: inline-block;
+	font-size: 14px; font-size: 1.4rem;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	padding-left: 4px;
+	width: 0;
+}
+
+.btn-navbar {
+    cursor: pointer;
+    filter: alpha(opacity=40);
+    float: left;
+    margin: 13px 5px 10px;
+    opacity: .4;
+    padding: 7px 10px;
+}
+
+.btn-navbar .icon-bar {
+	background-color: #F5F5F5;
+    border-radius: 1px 1px 1px 1px;
+    box-shadow: none;
+    display: block;
+    height: 2px;
+    width: 18px;
+}
+
+/* Expanded Nav Styling */
+
+.expanded #container {
+    left: 155px;
+    transform: translate3d(50px, 0px, 0px) scale3d(1, 1, 1);
+}
+
+.expanded #sidebar {
+	width: 155px;
+}
+
+.expanded #nav li {
+	width: 90%;
+}
+.expanded #nav li span {
+	display: inline-block;
+	height: auto;
+	opacity: 1;
+	overflow: visible;
+	width: auto;
+}
+
+/*
+.expanded #nav ul li.active:after {
+    content: ">";
+    display: block;
+    margin-top: -21px;
+    position: absolute;
+    right: -3px;
+    z-index: 2;
+}
+*/
+
+	
+
+/* General Styling */ 
+
+#wrapper {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+#container {
+	backface-visibility: hidden;
+  left: 50px;
+  position: relative;
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform 500ms ease 0s;
+  width: 100%;
+}
+
+.section {
+	background-attachment: scroll;
+	background-position: center top;
+	margin-left: -50px;
+	position: relative;
+}
+
+.section h2 {
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 36px; font-size: 3.6rem;
+	line-height: 56px;
+	margin: 15px 0 0 20px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.section h4 {
+    font-size: 23px; font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0 0 20px;
+    padding-bottom: 5px;
+}
+
+.section h5 {
+    font-size: 19px; font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 20px 0 0px;
+}
+
+.title {
+	position: absolute;
+	z-index: 1;
+	background: -moz-linear-gradient(top, rgba(35,31,32,0.25) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(35,31,32,0.25)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(35,31,32,0.25) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(35,31,32,0.25) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(35,31,32,0.25) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(35,31,32,0.25) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	height: 140px;
+}
+hr {
+border-top: 1px solid #000000;
+}
+.section .title hr {
+	border-color: #151515;
+	border-width: 1px 0 0;
+	margin-top: 50px;
+	width: 100%;
+}
+
+.section .title .alt hr {
+	border-color: #F1F1F1;
+}
+
+.section .desc {
+	margin-top: 20px;
+}
+
+.section .content {
+	margin-top: 75px;
+}
+
+.container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.control-group .controls input, .control-group .controls textarea {
+	background: #F1F1F1;
+	border-radius: 0px;
+	min-height: 36px;
+}
+
+.control-group .controls input:focus, .control-group .controls textarea:focus {
+	border-color: rgba(144, 144, 144, 0.9);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(144, 144, 144, 0.9);
+}
+
+.alert, .alert-error {
+	border-radius: 0px;
+}
+
+.btn-default {
+	background: none #F1F1F1;
+    color: #151515;
+    margin-top: 75px;
+}
+
+.btn-inverse {
+	background: none #E15930;
+    color: #F1F1F1;
+    margin-top: 25px;
+}
+
+.btn-default, .btn-inverse {
+	border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Lato-Regular",sans-serif;
+    font-size: 14px; font-size: 1.4rem;
+    font-weight: 300;
+		letter-spacing: 1px;
+    line-height: 20px;
+    padding: 8px 14px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 190px;
+		margin: 4px;
+}
+a.btn-inverse {
+width: 155px;
+}
+.btn-inverse span, .btn-default span {
+	font-weight: 700;
+}
+
+.btn-inverse.alt, .btn-default.alt {
+	text-align: right;
+}
+
+.btn-inverse i, .btn-default i {
+	float: right;
+	line-height: 20px;
+}
+
+.btn-inverse.alt i, .btn-default.alt i {
+	float: left;
+}
+
+.read-more {
+	cursor: pointer;
+	font-weight: 500;
+	margin-top: 20px;
+	padding-right: 10px;
+}
+
+.table th, .table td {
+    border-top: 1px solid #151515;
+    line-height: 20px;
+    padding: 10px 2px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+	background-color: rgba(60, 60, 60, 0.4);
+}
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+	background-color: rgba(75, 75, 75, 0.4);
+}
+
+
+/* Section 1 */
+
+#section1 {
+	background: #5E2F24;
+	background-image:url(/img/kookaburra/stock.jpg);
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+	background-repeat: repeat;
+}
+
+#section1 .thumb {
+	display: none;
+}
+#section1 .container-fluid {
+	background: rgba(0,0,0,0.1);
+}
+	
+	#section1 .intro {
+		margin: 0;
+		text-align: center;
+	}
+#section1 .intro h1 {
+	color: #F1F1F1;
+	font-size: 65px; font-size: 6.5rem;
+	font-weight: 300;
+	letter-spacing: -1px;
+	line-height: 65px;
+	margin-left: -5px;
+	margin-bottom: 0;
+}
+#section1 .intro h2, #section1 .intro h3 {
+	color: #F1F1F1;
+	font-family: "Lato-Bold",sans-serif;
+	font-size: 22px; font-size: 2.2rem;
+  font-weight: bold;
+	margin: 0px 0 6px 0px;
+}
+#section1 .intro h3 {
+	font-family: "Lato-Light",sans-serif;
+	font-weight: 100;
+	margin: 23px 0;
+}
+#section1 .intro h3 .yellow, .yellow {
+	color: #EBA03B;
+}
+#section1 .intro hr {
+	width: 220px;
+	margin: 0 auto;
+}
+
+/* Section 2 */ 
+
+.toolbox-header {
+	font-weight: 500;
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.toolbox-item {
+	height: 20px;
+}
+
+.skill {
+    text-align: center;
+}
+iframe.menu {
+	border: none;
+	height: 100%;
+	width: 100%;
+}
+#section2 {
+	background-color: #F79F1F;
+	color: #F1F1F1;
+}
+#section2 h3 {
+	margin-right: 20px;
+}
+
+/* Section 3 */ 
+
+#section3 h6 {
+	padding: 15px;
+}
+
+
+/* Section 4 */
+
+#section4 .read-more a, #section4 .read-more a:hover {
+	color: #151515;
+}
+
+#section4 .content .span4, #section4 .content .span6 {
+	padding-right: 20px;
+}
+
+#section4 .content {
+	min-height: 300px;
+}
+
+#section4 .content .span8 {
+	display: none;
+}
+
+#section4 .content .span8.current {
+	display: block;
+}
+
+#section4 ul.article-tags {
+    border-top: 1px solid #151515;
+    margin: 40px 0 0;
+}
+
+#section4 ul.article-tags li {
+    border-bottom: 1px solid #151515;
+    cursor: pointer;
+    display: block;
+    font-size: 17px; font-size: 1.7rem;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    padding-left: 45px;
+    position: relative;
+}
+
+#section4 ul.article-tags li:hover, #section4 ul.article-tags li.current {
+    background-color: #1abc9c;
+    color:#ecf0f1;
+}
+
+#section4 ul.article-tags i {
+    left: 15px;
+    font-size: 16px; font-size: 1.6rem;
+    position: absolute;
+    top: 10px;
+}
+
+#section4 h4 {
+	border-bottom: 1px solid #151515;
+    height: 35px;
+    margin-bottom: 18px;
+}
+
+
+/* Section 5 */
+
+#section5 {
+	background:#1abc9c;
+	color: #F1F1F1;
+	padding-bottom: 0px;
+}
+
+#section5 h4.intro {
+	border-bottom: 1px solid #F1F1F1;
+    height: 35px;
+    margin-bottom: 18px;
+}
+
+#section5 .content {
+	position: relative;
+}
+
+#section5 .content .alt {
+	margin-top: 20px;
+}
+
+#section5 .content .alt h4 {
+	line-height: 24px;
+	margin: 0;
+	padding-right: 20px;
+}
+
+#section5 .content .alt h4, #section6 .content .alt span {
+	display: inline-block;
+}
+
+#section5 .content .alt h5 {
+	display: inline;
+    line-height: 20px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+#section5 .content .span4 {
+	padding-right: 25px;
+}
+
+#section5 .btn-default {
+    margin-top: 15px;
+}
+
+#section5 #footer {
+	margin: 200px 0 40px;
+}
+
+#section5 #footer p {
+	font-size: 14px; font-size: 1.4rem;
+}
+
+#section6 {
+	height: auto !important;
+	background-color: #D6D6D6;
+}
+
+#section7, #map {
+	height: 550px;
+}
+#section8 {
+	background-color: #333333;
+	color: #f1f1f1;
+}
+#map {
+	padding: 0 48px;
+	width: 100%;
+}
+.section .content {
+  margin-top: 130px;
+	margin-left: 20px;
+	z-index: 2;
+	position: relative;
+}
+#section3 .content {
+margin-top: 76px;
+margin-bottom: 33px;
+}
+
+
+
+/** Carousel **/
+.jcarousel {
+	margin-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 6px;
+}
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.jcarousel li {
+    width: 250px;
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 30px 0 0;
+}
+.jcarousel img{
+    /* display: block; max-width: 100%; height: auto !important; */
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.4);
+}
+.jcarousel img:hover {
+	-webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.7); 
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+/** Carousel Controls **/
+.jcarousel-control-prev, .jcarousel-control-prev2,
+.jcarousel-control-next, .jcarousel-control-next2 {
+    position: absolute;
+    top: 45%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+		text-indent: -9999px;
+		background-image: url("/img/kookaburra/arrow-transparent.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+    width: 150px;
+    height: 150px;
+		z-index:1009;
+}
+.jcarousel-control-prev, .jcarousel-control-prev2 {
+	background-image: url("/img/kookaburra/arrow-transparent-left.png");
+}
+.jcarousel-control-prev:hover, .jcarousel-control-prev2:hover,
+.jcarousel-control-next:hover, .jcarousel-control-next2:hover {
+	background-image: url("/img/kookaburra/arrow-solid.png");
+}
+.jcarousel-control-prev:hover, .jcarousel-control-prev2:hover {
+	background-image: url("/img/kookaburra/arrow-solid-left.png");
+}
+.jcarousel-control-prev, .jcarousel-control-prev2 {
+    left: 50px;
+}
+.jcarousel-control-next, .jcarousel-control-next2 {
+    right: 50px;
+}
+a.disabled { visibility: hidden; }
+
+#section3 .content h3 {
+	display: none;
+}
+
+
+.touch {
+height: 90%;
+-webkit-overflow-scrolling: touch !important;
+overflow: scroll !important;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1320px) {
+	
+	#section1 {
+		background-size: 1320px auto;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+
+@media screen and (max-width: 1199px) {
+
+	.section {
+		padding: 0;
+	}
+	
+	#section1 {
+		background-size: 1200px auto;
+	}
+
+}
+
+@media screen and (max-width: 979px) {
+	
+	.section .title hr {
+	    margin-top: 40px;
+	}
+	
+	.section .desc .span8 {
+    	width: 100%;
+	}
+
+	#section5 .content .span4 {
+		padding-right: 0px;
+	}
+		
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+	
+	#section2 .content .expand {
+		width: 48.6188%;
+	}
+	
+	#section4 .content .expand {
+		width: 100%;
+	}
+
+}
+
+
+@media (max-width: 767px) {
+	
+	body {
+		padding: 0px;
+	}
+	#section1 .intro {
+		margin: 30px 0 0 0;
+	}
+
+	#section1 .intro h1 {
+		font-size: 38px; font-size: 3.8rem;
+	}
+	
+	#section1 .intro h2 {
+		font-size: 14px; font-size: 1.4rem;
+		line-height: 22px;
+	}
+	
+	#section1 .intro h3 {
+		font-size: 22px; font-size: 2.2rem;
+		line-height: 24px;
+		width: 100%;
+	}
+		
+	.section {
+		padding: 0;
+	}
+	.jcarousel-control-prev, .jcarousel-control-prev2,
+	.jcarousel-control-next, .jcarousel-control-next2
+	.kookaburra-logo {
+		display: none;
+	}
+	
+	.section .content .pull-right {
+    	float:left;
+    }
+	
+	.section .title hr {
+		margin-left: 0px;
+	}
+	.section h2 {
+	font-size: 30px;
+	font-size: 3.0rem;
+	line-height: 30px;
+	}
+	.section .content {
+		margin-top: 90px;
+	}
+	.title {
+		height: 84px;
+	}
+		
+	#section1 {
+		background-size: 920px auto;
+	}
+	
+	#section3 .content img {
+    	margin-top: 30px;
+    }
+        
+    #section3 .table th, #section3 .table td {
+    	font-size: 13px; font-size: 1.3rem;
+	}
+	
+	#section3 .table {
+		margin-top: 30px;
+	}
+		
+    #section5 .span8 {
+	    margin-top: 30px;
+    }
+    
+	
+}
+
+@media screen and (min-width: 481px) and (max-width: 649px) {
+
+	#section1 .intro h1 {
+		font-size: 60px; font-size: 6rem;
+		line-height: 60px;
+	}
+	
+	#section1 .intro h3 {
+		font-size: 20px; font-size: 2rem;
+	}
+
+}
+
+@media screen and (min-width: 481px) {
+	
+}
+
+
+@media screen and (max-width: 480px) {
+	#section1 {
+	    background-size: 1024px auto;
+	}
+	
+	#section3 .table th, #section3 .table td {
+    	font-size: 11px; font-size: 1.1rem;
+	}
+	
+	#section4 h4 {
+	    height: auto;
+	}    
+
+
+}

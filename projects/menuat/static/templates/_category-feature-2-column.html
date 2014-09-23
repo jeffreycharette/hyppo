@@ -1,0 +1,28 @@
+{{#if hide}}{{{pin}}{{/if}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}}">
+	<ul class="row category">
+		{{#if category}}
+	    <li class="col-md-6 category-title">
+	    	{{#if assets}}
+					{{#each assets}}
+						<img src="{{basePath}}/{{name}}" />
+					{{/each}}
+				{{/if}}
+	    </li>
+		{{/if}}
+		<li class="col-md-6">
+			<ul class="row">
+				<li class="col-md-12 feature">
+					{{#if message}}
+						{{{message}}}
+					{{/if}}
+				</li>
+				<li class="col-md-12">
+					<div class="table feature-item">
+						{{{items}}}
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>

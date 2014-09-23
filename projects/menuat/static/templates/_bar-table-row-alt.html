@@ -1,0 +1,13 @@
+{{#if hide}}{{{pin}}{{/if}}
+	<dl id="{{_id}}" class="row{{#if hide}} hide{{/if}}{{#if push}} push{{/if}}">
+    <dd class="col-md-8 col-sm-8 col-xs-8 number">
+    	<dl class="row" style="border: none;">
+				<dd class="col-sm-2 col-xs-2">{{#if order}}{{{order}}}{{/if}}</dd>
+				<dd class="col-md-10 col-sm-10 col-xs-10" style="border: none;">{{#if title}}{{{title}}}{{/if}}</dd>
+			</dl>
+    </dd>
+    <!--<dd class="col-md-3 hidden-sm hidden-xs">{{#if brewery}}{{{brewery}}}{{/if}}</dd>
+    <dd class="col-md-3 hidden-sm hidden-xs">{{#if style}}{{{style}}}{{/if}}</dd>-->
+    <dt class="col-md-2 col-sm-2 col-xs-2">{{#if abv}}{{{abv}}}{{/if}}</dt>
+    <dd class="col-md-2 col-sm-2 col-xs-2 price">{{#if price}}{{{price}}}{{/if}}</dd>
+	</dl>

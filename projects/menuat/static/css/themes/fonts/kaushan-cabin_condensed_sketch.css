@@ -1,0 +1,19 @@
+/*-------------------------------------------------------
+-- Fonts
+-------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(http://fonts.googleapis.com/css?family=Cabin+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch);
+
+body, .description, small {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.category-title h2 {
+	font-family: 'Kaushan Script', cursive;
+}
+.title, .price, .heading h3 {
+	font-family: 'Cabin Sketch', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.event {
+	font-family: Georgia, serif;
+}

@@ -1,0 +1,32 @@
+{
+	"name": "edit",
+	"version": "0.0.2",
+	"description": "Menuat",
+	"load": "lib/app",
+	"modules": "lib",
+	"attachments": ["static"],
+	"handlebars": {
+		"templates": "static/templates"
+	},
+	"host": "menuat.com",
+	"dependencies": {
+		"modules": null,
+		"properties": null,
+		"cookies": null,
+		"url": null,
+		"db": null,
+		"attachments": null,
+		"settings": null,
+		"handlebars": null,
+		"handlebars-helpers": null,
+		"couchtypes": null,
+		"async": null,
+		"underscore": null,
+		"underscore-string": null,
+		"jquery": null,
+		"json2": null,
+		"wc": null,
+		"moment": null,
+		"users": null
+	}
+}

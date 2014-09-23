@@ -1,0 +1,11 @@
+{{#if hide}}{{{pin}}{{/if}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}} slide">
+	<ul class="row">
+    <li class="col-xs-12">
+			<h3>{{{title}}}</h3>
+			{{#each legend}}
+			<img src="{{basePath}}/{{name}}" />
+			{{/each}}
+    </li>
+	</ul>
+</div>

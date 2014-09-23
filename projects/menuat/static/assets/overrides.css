@@ -1,0 +1,71 @@
+select, select:hover {
+	border-radius: 3px;
+	background-color: #62c2aa;
+	color: #f2f2e3;
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	height: 50px;
+	text-transform: uppercase;
+	border: 1px solid #4f9881;
+	-webkit-transition-property: background-color;
+	transition-property: background-color;
+}
+option:not(:checked) { color: #999999; font-family: "Lato", sans-serif;}
+
+section#support dl.accordion dd.faq-accordion-nav a.question-title,
+section#faq dl.accordion dd.faq-accordion-nav a.question-title {
+color: #F05630;
+}
+.reveal-modal.open {
+	position: fixed;
+	background: #FFFFFF;
+	max-width: 1024px;
+	right: 0;
+	left: 0;
+	top: 20px !important;
+	bottom: 20px !important;
+	min-height: 775px;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	overflow: auto;
+	border: none;
+	box-shadow: none;
+}
+#vidModal {
+	background: none;
+	position: absolute;
+	padding: 0;
+}
+.top-bar .name h1 {
+	display: block;
+	margin: 14px 0 0 16px;
+	width: 165px;
+	height: 48px;
+	text-indent: -9009px;
+	background: transparent url('/assets/menuat_logo-55472462f9c256c3b7e693811cd3ce6a.png') no-repeat;
+}
+.top-bar .name h1 a {
+display: block;
+width: 100%;
+height: 100%;
+outline: none;
+border: 0;
+}
+.top-bar .name {
+	height: 60px;
+}
+.top-bar .toggle-topbar.menu-icon {
+	margin-top: 0px;
+	top: 10px;
+}
+a:hover {
+color: #62C2AA;
+}
+.ui-pnotify-container {
+	color: #FFFFFF;
+	background-color: #62c2aa;
+}
+#testimonial blockquote.testimonial-quote em {
+font-weight: 400;
+}

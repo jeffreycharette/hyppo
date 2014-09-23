@@ -1,0 +1,241 @@
+/*-------------------------------------------------------
+-- Fonts
+-------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
+@import url(http://fonts.googleapis.com/css?family=Vast+Shadow);
+
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: black;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #eaeae3;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.container-fluid {
+	padding: 15px;
+}
+
+/*-------------------------------------------------------
+-- Layout
+-------------------------------------------------------*/
+
+#bg-slideshow {
+	z-index: -2;
+	background-color: #000000;
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	overflow: hidden;
+	opacity: 1;
+}
+
+#bg-slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+
+.wrapper {
+	background: rgba(255,255,255,0.05);
+	display: block;
+	width: 100%;
+	padding-bottom: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-o-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+}
+.logo {
+	background: none;
+	border: none;
+	box-shadow: none;
+	text-align: center;
+	-webkit-box-shadow: none;
+}
+.logo img {
+	background: none;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	width: 85%;
+}
+.wrapper:not(:first-child) {
+	margin-top: 11px;
+}
+
+.wrapper ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wrapper ul:not(.category) {
+	padding: 7px 0 0 0;
+}
+.wrapper ul li {
+	line-height: 130%;
+}
+
+.category-title h2, .heading h3, h2.yellow  {
+	font-family: 'Vast Shadow', cursive;
+	font-weight: 400;
+	color: #FFF54C;
+	font-size: 28px;
+	letter-spacing: 1px;
+	line-height: 1em;
+	margin-bottom: 0;
+	margin-top: 9px;
+	text-transform: uppercase;
+	line-height: 50px;
+}
+.heading h3 {
+	font-size: 21px;
+}
+.category-title h2 img {
+	bottom: 5px;
+	margin-left: 13px;
+	position: absolute;
+}
+hr {
+	margin: 0 15px 5px 15px;
+	height: 2px;
+	border: none;
+	background: #FFFFFF;
+}
+.amount, .green, .currency {
+	color: #B1D9A3;
+}
+.currency {
+	display: none;
+}
+.heading, .price {
+	text-align: right;
+	white-space: nowrap;
+}
+.description {
+	color: #BFDBEA !important;
+	font-size: 30px;
+	font-style: italic;
+}
+
+/*-------------------------------------------------------
+-- Event
+-------------------------------------------------------*/
+h2.yellow {
+	font-size: 62px;
+	margin-top: 0;
+}
+.event .image {
+	max-height: 280px;
+	min-height: 100px;
+}
+.event img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.event {
+	font-family: Georgia, serif;
+	font-size: 41px;
+}
+.event .row {
+	background: url('/img/bg-border-white.gif') repeat-x;
+	margin-top: 25px;
+	padding-top: 25px !important;
+}
+.wrapper .event ul:not(.category) {
+	padding-top: 25px;
+}
+
+/*-------------------------------------------------------
+-- Overrides
+-------------------------------------------------------*/
+.red, .push, .push li, .push li h2, .push li h3 {
+	color: #7E1416;
+}
+small {
+	font-size: 75%;
+}
+.row-fluid {
+	column-gap: 11px;
+	-moz-column-gap: 11px;
+	-webkit-column-gap: 11px;
+}
+
+@media (min-width: 1920px) {
+	body {
+		padding-top: 10px;
+	}
+	.row-fluid {
+		column-count: 6;
+		-webkit-column-count: 6;
+		column-gap: 20px;
+		-webkit-column-gap: 20px;
+		column-gap: ;
+		min-height: 1000px;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.title, .processing > .row {
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.navbar {
+		display: none;
+	}
+}
+@media (max-width: 1919px) {
+	.container-fluid, .container-fluid .row-fluid {
+		padding: 10px !important;
+	}
+	.row-fluid {
+		height: auto !important;
+		width: auto !important;
+	}
+}
+@media screen and (min-width: 1270px) and (max-width: 1919px) {
+	.row-fluid {
+		column-count: 2;
+		-webkit-column-count: 2;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+}
+@media screen and (max-width: 480px) {
+	body, .description {
+		font-size: 16px;
+		font-weight: normal;
+	}
+	.category-title h2, .heading h3  {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	#d5f1c06fb6ae515cc4132d2d360844a2 h2 img {
+		height: 80%;
+	}
+}

@@ -1,0 +1,87 @@
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+
+.navbar-inverse {
+background-color: rgba(34,34,34,.80);
+}
+.navbar-brand {
+	background-image: url('/img/menuat.png');
+	background-repeat: no-repeat;
+	background-position: 15px 14px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-indent: -9009px;
+	height: 50px;
+	width: 130px;
+}
+.navbar-brand a {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.navbar-form {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	width: 23%;
+}
+#menu {
+	height: 1080px;
+	padding-top: 70px;
+	width: 100%;
+}
+#map {
+	height: 1080px;
+	padding-top: 70px;
+	width: 100%;
+}
+section iframe {
+	border: none;
+	height: 100%;
+	width: 100%;
+}
+.flip {
+	-ms-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 720px;
+	padding-top: 10px !important;
+}
+.flip .row-fluid {
+	column-count: 1!important;
+	-webkit-column-count: 1 !important;
+	column-gap: 20px !important;
+	-webkit-column-gap: 20px !important;
+	min-height: 1000px !important;
+}
+.flip .root, .wrapper > .row {
+	display: block !important;
+	column-break-inside: avoid !important;
+	-webkit-column-break-inside: avoid !important;
+}
+.flip .title, .processing > .row {
+	column-break-inside: avoid !important;
+	-webkit-column-break-inside: avoid !important;
+}
+.flip .navbar {
+	display: none !important;
+}
+
+.flip #bg-slideshow {
+	top: -11%;
+}
+@media (min-width: 768px) {
+	.navbar-form {
+		padding-right: 0;
+	}
+}
+@media (max-width: 767px) {
+	.navbar-form {
+		width: 100%;
+		margin: 0;
+	}
+}

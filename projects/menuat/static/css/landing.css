@@ -1,0 +1,416 @@
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One);
+
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+body {
+	background-color: #F2F2E3;
+	color: #534741;
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.6;
+}
+
+h2, #features h3, .telephone {
+	font-family: 'Tungsten A', 'Tungsten B';
+	font-weight: 400;
+	font-style: normal;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 54px;
+	letter-spacing: 2px;
+	margin-bottom: 25px;
+}
+h3 {
+	font-size: 49px;
+}
+
+a, a:visited, a:hover {
+	color: #66C1AA;
+}
+
+/* General button style (reset) */
+a.btn-2:hover {
+	text-decoration: none;
+}
+a.btn-2:visited {
+	color: #FFFFFF;
+}
+
+.leckerli {
+	font-family: 'Leckerli One', cursive;
+	letter-spacing: -7px;
+}
+
+.btn-default, .btn-default:hover {
+	color: #F2F2E3;
+	background-color: #66C1AA;
+	border-color: #66C1AA;
+}
+
+.btn-default:hover {
+	color: #534741;
+}
+
+.btn-2 {
+	background: #F05A2F;
+	box-shadow: 0 6px #C24234;
+	border: none;
+	color: #F2F2E3;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Tungsten A', 'Tungsten B';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 40px;
+	letter-spacing: 1px;
+	line-height: 1.1em;
+	outline: none;
+	position: relative;
+	padding: 2px 19px;
+	text-transform: uppercase;
+}
+
+/* Button 2a */
+.btn-2a, .btn-2a:hover, .btn-2a:active {
+	color: #F2F2E3;
+}
+
+.btn-2a:hover {
+	box-shadow: 0 4px #C24234;
+	top: 2px;
+}
+
+.btn-2a:active {
+	box-shadow: 0 0 #C24234;
+	top: 6px;
+}
+
+.form-control {
+	font-size: 12px;
+}
+
+.carousel-control, .carousel-indicators {
+	display: none;
+}
+/*-------------------------------------------------------
+-- Navbar
+-------------------------------------------------------*/
+
+.navbar {
+	color: #F2F2E3;
+	min-height: 48px;
+}
+.navbar-inverse {
+	background-color: #74736D;
+	border-color: #5D574F;
+}
+.navbar-fixed-top {
+	border-width: 0 0 4px;
+}
+.navbar .list-inline>li {
+	vertical-align: middle;
+}
+.navbar-header .list-inline {
+	margin: 10px 0 0 10px;
+}
+.navbar .form-control {
+	height: 28px;
+}
+.navbar .btn {
+	padding: 3px 12px;
+}
+.navbar-form {
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.search {
+	width: 250px;
+}
+.form-control {
+	color: #736357;
+}
+.navbar-toggle {
+padding: 7px 9px;
+margin-top: 7px;
+margin-bottom: 7px;
+}
+
+/* CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-top: 46px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	color: #F2F2E3;
+	padding-top: 0;
+	left: auto;
+	right: 50%;
+	top: 50%;
+	text-align: left;
+	width: 360px;
+	z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  background-color: #000000;
+}
+.carousel-inner > .item > img {
+	max-width: inherit;
+	position: relative;
+	left: 50%;
+	margin-left: -606px;
+}
+
+/* SECTIONS
+-------------------------------------------------- */
+#welcome {
+	background: #000000 url('/img/header.jpg') no-repeat top center;
+	background-size: 100%;
+	background-size: cover;
+	-moz-background-size: cover;
+	margin-top: 48px;
+	width: 100%;
+}
+#welcome .col-sm-5 {
+	margin-top: 35px;
+	margin-bottom: 0;
+	max-width: 400px;
+}
+#welcome .col-sm-5 img {
+	width: 100%
+}
+#welcome .col-sm-5 p {
+	background: rgba(0,0,0,0.5);
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 1);
+	-moz-box-shadow:    0px 0px 40px rgba(0, 0, 0, 1);
+	box-shadow:         0px 0px 40px rgba(0, 0, 0, 1);
+	margin: 20px 0;
+}
+.hand {
+	background: transparent url('/img/hand.png') no-repeat top right;
+	background-size: 100%;
+	background-size: contain;
+	-moz-background-size: contain;
+	position: relative;
+	text-indent: -9009px;
+	min-height: 373px;
+}
+.hand h2 {
+	display: block;
+	width: 100%;
+	height: 373px;
+	margin: 0;
+	padding: 0;
+}
+#welcome .search {
+	width: 100%;
+}
+
+#message, #themes, #food, #welcome {
+	color: #F2F2E3;
+}
+
+#message {
+	background: #ee5b39; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ee5b39 0%, #eb3b38 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ee5b39), color-stop(100%,#eb3b38)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ee5b39 0%,#eb3b38 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ee5b39 0%,#eb3b38 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ee5b39 0%,#eb3b38 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ee5b39 0%,#eb3b38 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee5b39', endColorstr='#eb3b38',GradientType=1 ); /* IE6-9 */
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	border-bottom: 4px solid #A23B27;
+	min-height: 440px;
+	padding-top: 40px;
+	text-shadow: 0 -1px 0 rgb(192, 67, 57);
+}
+#message .col-md-9, #message .col-md-10 {
+	z-index: 1;
+}
+#message .container {
+	position: relative;
+}
+.watermark {
+	background: transparent url('/img/menuat-watermark.png') no-repeat 0 0;
+	position: absolute;
+	right: -20px;
+	top: 80px;
+	width: 232px;
+	height: 233px;
+	z-index: 0;
+}
+
+#themes {
+	background: #000000 url('/img/gorgeous-menus.jpg') no-repeat top center;
+	background-size: 100%;
+	background-size: cover;
+	-moz-background-size: cover;
+	min-height: 447px;
+	width: 100%;
+}
+
+#themes h2 {
+	font-size: 120px;
+}
+
+#food {
+	background: rgb(67,66,60); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(67,66,60,1) 0%, rgba(53,51,48,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(67,66,60,1)), color-stop(100%,rgba(53,51,48,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(67,66,60,1) 0%,rgba(53,51,48,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(67,66,60,1) 0%,rgba(53,51,48,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(67,66,60,1) 0%,rgba(53,51,48,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(67,66,60,1) 0%,rgba(53,51,48,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43423c', endColorstr='#353330',GradientType=1 ); /* IE6-9 */
+	border-bottom: 4px solid #2C2B27;
+	min-height: 430px;
+}
+#food h2 {
+	color: #62C2AA;
+	margin-top: 80px;
+	text-shadow: 0 -1px 0 rgb(83, 71, 65);
+}
+
+#features {
+	background: transparent url('/img/bg-gradient.gif') repeat-x 0 0;
+	border-bottom: 4px solid #A5A39A;
+	position: relative;
+}
+.thefinger {
+	left: 30px;
+	bottom: 0;
+	position: absolute;
+	height: 843px;
+	max-width: 274px;
+}
+
+#features .col-sm-3 {
+	margin-top: 80px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+#features h3 {
+	color: #C24234;
+}
+.message {
+	margin-top: 126px;
+}
+
+#included {
+	background: #66C1AA url('/img/bg-gradient-blue.gif') repeat-x 0 0;
+	border-bottom: 4px solid #478675;
+	min-height: 430px;
+	padding-top: 10px;
+	text-shadow: 0 2px 0 rgb(135, 206, 189);
+}
+.watermark-blue {
+	background: transparent url('/img/menuat-watermark-blue.png') no-repeat 0 0;
+	position: absolute;
+	right: -20px;
+	top: 35px;
+	width: 211px;
+	height: 222px;
+	z-index: 0;
+}
+
+#included .container {
+	position: relative;
+}
+#included h2, h3 {
+	font-family: 'Leckerli One', cursive;
+	letter-spacing: 0;
+	line-height: 1.1em;
+	text-transform: none;
+}
+#included h2 {
+	font-size: 82px;
+}
+#included .col-md-3 {
+	text-align: center;
+}
+
+#action {
+	background: transparent url('/img/bg-gradient.gif') repeat-x 0 0;
+	border-bottom: 4px solid #A5A39A;
+	min-height: 390px;
+	padding-top: 60px;
+}
+#action h2 {
+	color: #F05A2F;
+}
+#action .telephone {
+	font-size: 61px;
+	color: #62C2AA;
+	line-height: 1em;
+	letter-spacing: 1px;
+}
+
+footer {
+	background: #333333 url('/img/bg-gradient-grey.gif') repeat-x 0 0;
+	color: #999999;
+	min-height: 130px;
+	padding-top: 10px;
+}
+
+.watermark-grey {
+	background: transparent url('/img/menuat-watermark-grey.png') no-repeat 0 0;
+	width: 105px;
+	height: 104px;
+	text-indent: -9009px;
+}
+
+footer ul {
+	margin-top: 20px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+	.navbar-form {
+		padding-right: 0;
+	}
+}
+@media (max-width: 767px) {
+	.search {
+		width: 100%;
+	}
+	.btn-2 {
+		margin-bottom: 28px;
+	}
+	
+	#message, #themes, #food, #features, #included, #action {
+		min-height: inherit;
+	}
+	#welcome .col-sm-5 {
+		margin-bottom: 35px;
+	}
+	
+	.thefinger, #features .first, .hand {
+		display: none;
+	}
+	
+	.watermark, .watermark-blue {
+		right: 0;
+	}
+	
+	#features .col-sm-3 {
+		margin-top: 30px;
+	}
+	#included h2 {
+		font-size: 71px;
+	}
+}

@@ -1,0 +1,12 @@
+{
+    "name": "wc",
+    "version": "0.0.1",
+    "categories": ["utils"],
+    "description": "Renders handlebars with helpers",
+    "modules": "wc",
+    "dependencies": {
+   		"modules": null,
+        "handlebars": ">=1.0.0",
+		"settings": null
+    }
+}

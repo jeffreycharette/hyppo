@@ -1,0 +1,15 @@
+{{#if hide}}{{{pin}}{{/if}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}} showtime">
+	<input class="schedule" type="hidden" value="{{schedule}}">
+	<ul class="row">
+    <li class="col-xs-12">
+			<h3>{{{title}}}</h3>
+		</li>
+    <li class="col-xs-12 showtimes">
+			{{#each showtimes}}
+			<span>{{{this}}}</span> 
+			{{/each}}
+    </li>
+	</ul>
+	<div class="description">{{{description}}}</div>
+</div>

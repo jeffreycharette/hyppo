@@ -1,0 +1,22 @@
+{{#if hide}}{{{pin}}{{/if}}
+<span id="{{_id}}" class="root{{#if hide}} hide{{/if}}{{#if push}} push{{/if}}">
+	<input class="schedule" type="hidden" value="{{schedule}}">
+	<ul class="row">
+	    <li class="col-sm-push-{{indent}} col-xs-{{price-offset}}">
+	    	{{#if title}}<span class="title">{{{title}}}</span>{{/if}}{{#if description}} - {{{description}}}{{/if}}
+	    </li>
+		{{#each price}}
+		<li class="col-xs-2 price"><span class="currency">$</span><span class="amount">{{{this}}}</span></li>
+		{{/each}}
+	</ul>
+	{{#if calories}}
+	<ul class="row">
+    <li class="col-xs-{{price-offset}} description">
+			{{#if calories}}<span class="calories">{{{calories}}}</span>{{/if}}
+    </li>
+		{{#each price}}
+		<li class="col-xs-2 spacer"></li>
+		{{/each}}
+	</ul>
+	{{/if}}
+</span>

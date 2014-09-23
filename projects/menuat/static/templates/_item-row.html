@@ -1,0 +1,21 @@
+{{#if hide}}{{{pin}}{{/if}}
+<span id="{{_id}}" class="root{{#if hide}} hide{{/if}}{{#if push}} push{{/if}}">
+	<ul class="row list-unstyled">
+		{{#if title}}
+	    <li class="col-sm-push-{{indent}} col-xs-8 title">
+	    	{{{title}}}
+	    </li>
+		{{/if}}
+		{{#each price}}
+		<li class="col-xs-4 price"><span class="currency">$</span><span class="amount">{{{this}}}</span></li>
+		{{/each}}
+	</ul>
+	<ul class="row list-unstyled desc">
+		{{#if description}}
+	    <li class="col-xs-12 description">
+				{{{description}}}
+				{{#if calories}}<span class="calories">{{{calories}}}</span>{{/if}}
+	    </li>
+		{{/if}}
+	</ul>
+</span>

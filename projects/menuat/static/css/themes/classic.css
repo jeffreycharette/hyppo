@@ -1,0 +1,161 @@
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #E2DACF;
+	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.container-fluid {
+	padding: 15px;
+}
+
+@media (min-width: 1920px) {
+	.container-fluid {
+		width: 4000px;
+	}
+	.row-fluid {
+		height: 1065px;
+		width: 3800px;
+		column-count: 6;
+		-webkit-column-count: 6;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+}
+@media (max-width: 1919px) {
+	.container-fluid {
+		padding: 5px !important;
+	}
+	.row-fluid {
+		height: auto !important;
+		width: auto !important;
+	}
+	.row, .perm {
+		overflow: hidden;
+		display: block;
+	}
+}
+
+hr {
+	margin: 0 15px 5px 15px;
+	height: 2px;
+	border: none;
+	background: #000000;
+}
+
+/*-------------------------------------------------------
+-- Layout
+-------------------------------------------------------*/
+
+#bg-slideshow {
+	z-index: -2;
+	background-color: #000000;
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	overflow: hidden;
+	opacity: 1;
+}
+
+#bg-slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+
+.wrapper {
+	display: block;
+	width: 100%;
+	padding-bottom: 15px;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-o-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+}
+.logo {
+	background: none;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.wrapper:not(:first-child) {
+	margin-top: 15px;
+}
+
+.wrapper ul {
+	margin: 0;
+	padding: 0 15px 0 15px;
+	list-style: none;
+}
+
+.wrapper ul:not(.title) {
+	padding: 8px 15px 0 15px;
+}
+
+.wrapper ul li {
+	line-height: 130%;
+}
+.navbar-inverse {
+background-color: rgba(0,0,0,0.5);
+}
+.calories {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 1px 2px;
+	background-color: rgba(0,0,0,0.5);
+	color: lightyellow;
+}
+.category-title h2 {
+	font-size: 48px
+}
+.title, .price {
+	font-size: 35px;
+}
+.category-title h2 {
+	font-family: 'Krona One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.heading h3 {
+	font-family: 'Abel', serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 35px;
+	line-height: 52px;
+	text-align: right;
+}
+.price, .calories {
+	font-family: 'Poly', serif;
+	font-weight: 400;
+	text-align: right;
+}
+.title {
+	font-family: 'Abel', serif;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.description {
+	font-style: italic;
+}

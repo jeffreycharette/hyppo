@@ -1,0 +1,15 @@
+{{{pin}}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}}">
+	<ul class="row {{#if push}} push{{/if}} {{classname}}">
+	  <li class="col-xs-6">
+			<div id="instafeed"></div>
+	  </li>
+	  <li class="col-xs-6">
+			{{#if assets}}
+				{{#each assets}}
+					<img class="footer-logo" src="{{basePath}}/{{name}}" />
+				{{/each}}
+			{{/if}}
+	  </li>
+	</ul>
+</div>

@@ -1,0 +1,9 @@
+{{#if hide}}{{{pin}}{{/if}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}} logo">
+	{{{pin}}}
+	{{#if assets}}
+		{{#each assets}}
+		<img src="{{basePath}}/{{name}}" />
+		{{/each}}
+	{{/if}}
+</div>

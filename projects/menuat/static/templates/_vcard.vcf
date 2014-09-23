@@ -1,0 +1,7 @@
+BEGIN:VCARD
+{{#if name}}FN:{{name}}{{/if}}
+{{#if subject}}CATEGORIES:{{subject}}{{/if}}
+{{#if phone}}TEL;WORK:{{phone}}{{/if}}
+{{#if email}}EMAIL;INTERNET:{{email}}{{/if}}
+{{#if message}}NOTE:{{#if subject}}{{subject}}{{/if}}{{#if created_at}} on {{created_at}}{{/if}} - {{message}}{{/if}}
+END:VCARD

@@ -1,0 +1,18 @@
+{{#if hide}}{{{pin}}{{/if}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}} event">
+	<input class="schedule" type="hidden" value="{{schedule}}">
+	<ul class="row">
+    <li class="col-xs-3">
+			{{{datetime}}}
+		</li>
+		<li class="col-xs-2 image">
+			{{#each image}}
+				<img src="{{basePath}}/{{name}}" />
+			{{/each}}
+		</li>
+    <li class="col-xs-7">
+			<div>{{{title}}}</div>
+			<div class="description">{{{description}}}</div>
+    </li>
+	</ul>
+</div>

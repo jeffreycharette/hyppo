@@ -1,0 +1,12 @@
+{{#if hide}}{{{pin}}{{/if}}
+<span id="{{_id}}" class="root{{#if hide}} hide{{/if}}{{#if push}} push{{/if}}">
+	<input class="schedule" type="hidden" value="{{schedule}}">
+	<hr/>
+	<ul class="row">
+		{{#if title}}
+	    <li class="col-xs-12 feature">
+	    	{{{title}}}
+	    </li>
+		{{/if}}
+	</ul>
+</span>

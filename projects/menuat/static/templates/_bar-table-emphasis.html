@@ -1,0 +1,16 @@
+{{#if hide}}{{{pin}}{{/if}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}}">
+	<ul class="row category emphasis">
+		<li class="col-xs-12">
+			<h3>{{#if category}}{{{category}}}{{/if}}</h3>
+			<div class="table">
+				{{#if heading}}
+				<dl class="heading row">
+				{{#if heading}}<dd class="col-xs-1">#</dd><dd class="col-xs-3">Brewery</dd><dd class="col-xs-3">Location</dd><dd class="col-xs-2">Name</dd><dd class="col-xs-2">Style</dd><dd class="col-xs-1">ABV</dd>{{/if}}
+				</dl>
+				{{/if}}
+				{{{items}}}
+			</div>
+		</li>
+	</ul>
+</div>

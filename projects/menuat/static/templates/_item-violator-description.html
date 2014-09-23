@@ -1,0 +1,22 @@
+{{#if hide}}{{{pin}}{{/if}}
+<span id="{{_id}}" class="yellow text-center root{{#if hide}} hide{{/if}}{{#if push}} push{{/if}}">
+	<ul class="row list-unstyled text-center">
+		{{#if title}}
+	    <li class="col-xs-12 title">
+	    	{{{title}}}
+	    </li>
+		{{/if}}
+	</ul>
+	<ul class="row list-unstyled">
+		<li class="col-xs-12">
+			{{#each price}}
+				<div style="width: 100%;"><span class="currency">$</span><span class="amount">{{this}}</span></div>
+			{{/each}}
+		</li>
+		<li class="col-xs-12 description">
+			{{#if description}}
+				{{{description}}}
+			{{/if}}
+	  </li>
+	</ul>
+</span>

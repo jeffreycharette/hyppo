@@ -1,0 +1,15 @@
+/*-------------------------------------------------------
+-- Fonts
+-------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Exo+2);
+@import url(http://fonts.googleapis.com/css?family=Vast+Shadow);
+
+body {
+	font-family: 'Exo 2', sans-serif;
+}
+.category-title h2, .heading h3, h2.yellow  {
+	font-family: 'Vast Shadow', cursive;
+}
+.event {
+	font-family: Georgia, serif;
+}

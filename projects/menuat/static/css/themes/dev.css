@@ -1,0 +1,10 @@
+.logo img {width: 50%;}
+@media (min-width: 1079px) {
+.row-fluid {
+height: 1800px !important;
+width: 3240px !important;
+}
+}
+.heading, .price {
+padding-right: 40px;
+}

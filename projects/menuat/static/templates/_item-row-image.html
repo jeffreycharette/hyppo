@@ -1,0 +1,17 @@
+{{#if hide}}{{{pin}}{{/if}}
+<span id="{{_id}}" class="root{{#if hide}} hide{{/if}}{{#if push}} push{{/if}}">
+	<ul class="row list-unstyled">
+		{{#if legend}}
+		<li class="col-xs-3 legend">
+			{{#each legend}}
+			<img src="{{basePath}}/{{name}}" />
+			{{/each}}
+		</li>
+		{{/if}}
+		<li class="col-xs-9">
+			{{#if title}}<div class="title">{{{title}}}</div>{{/if}}
+			{{#if description}}<div class="description">{{{description}}}</div>{{/if}}
+			{{#if calories}}<div class="calories">{{{calories}}}</div>{{/if}}
+		</li>
+	</ul>
+</span>

@@ -1,0 +1,23 @@
+/*-------------------------------------------------------
+-- Fonts
+-------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:300italic);
+@import url(http://fonts.googleapis.com/css?family=Krona+One);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Poly);
+
+body {
+	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.category-title h2 {
+	font-family: 'Krona One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.heading h3, .title {
+	font-family: 'Abel', serif;
+}
+.price, .calories {
+	font-family: 'Poly', serif;
+}
+.event {
+	font-family: Georgia, serif;
+}

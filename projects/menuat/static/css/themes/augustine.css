@@ -1,0 +1,201 @@
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #000000;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.container-fluid {
+	padding: 15px;
+}
+
+/*-------------------------------------------------------
+-- Layout
+-------------------------------------------------------*/
+
+#bg-slideshow {
+	z-index: -2;
+	background-color: #000000;
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	overflow: hidden;
+	opacity: 1;
+}
+
+#bg-slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+
+.wrapper {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.40)), color-stop(100%,rgba(229,229,229,0.9)));
+	display: block;
+	width: 100%;
+	padding-bottom: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-o-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+}
+.logo {
+	background: none;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.wrapper:not(:first-child) {
+	margin-top: 11px;
+}
+
+.wrapper ul {
+	margin: 0;
+	padding: 0 15px 0 15px;
+	list-style: none;
+}
+
+.wrapper ul:not(.title) {
+	padding: 0;
+}
+.wrapper ul li {
+	line-height: 130%;
+}
+
+.category-title h2, .heading h3  {
+	color: #614942;
+	font-size: 40px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 1em;
+	margin-bottom: 0;
+	margin-top: 15px;
+	text-transform: uppercase;
+	text-shadow: 0px -1px .2px #231F20,  0px 1px .2px #F7F4F2;
+}
+.heading h3 {
+	letter-spacing: 2px;
+	text-transform: none;
+	text-shadow: none;
+}
+.category-title h2 img {
+	bottom: 5px;
+	margin-left: 13px;
+	position: absolute;
+}
+.heading, .price {
+	text-align: right;
+	white-space: nowrap;
+}
+.title {
+	white-space: nowrap;
+}
+hr {
+	margin: 0 10px 5px 8px;
+	height: 2px;
+	border: none;
+	background: none;
+	border-bottom: 1px solid rgba(188,190,192,.7);
+	box-shadow: 0 1px 0 rgba(230,230,230,.7);
+}
+
+/*-------------------------------------------------------
+-- Overrides
+-------------------------------------------------------*/
+.red, .push, .push li, .push li h2, .push li h3 {
+	color: #7E1416;
+}
+small {
+	font-size: 75%;
+}
+.row-fluid {
+	column-gap: 11px;
+	-moz-column-gap: 11px;
+	-webkit-column-gap: 11px;
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+padding-right: 10px;
+padding-left: 10px;
+}
+
+@media (min-width: 1920px) {
+	body {
+		padding-top: 0;
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+	::-webkit-scrollbar { 
+	    display: none; 
+	}
+	.row-fluid {
+		column-count: 3;
+		-webkit-column-count: 3;
+		min-height: 1000px;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.title, .processing > .row {
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.navbar {
+		display: none;
+	}
+}
+@media (max-width: 1919px) {
+	.container-fluid {
+		padding: 10px !important;
+	}
+	.row-fluid {
+		height: auto !important;
+	}
+	.title {
+		white-space: normal;
+	}
+}
+@media screen and (min-width: 1270px) and (max-width: 1919px) {
+	.row-fluid {
+		column-count: 2;
+		-webkit-column-count: 2;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+}
+@media (max-width: 767px) {
+	.currency {
+		display: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	body {
+		font-size: 18px;
+	}
+	.category-title h2, .heading h3  {
+		font-size: 30px;
+	}
+}
