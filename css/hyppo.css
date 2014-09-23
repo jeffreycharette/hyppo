@@ -1,0 +1,951 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Coustard', serif;
+	font-weight: 400;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	display: block;
+	position: absolute;
+	min-width: 100%;
+	background-color: #272926;
+	background-image: url('../images/chalk_bg.png'), url('../images/background.jpg');
+	background-position: center 185px, center top;
+	background-repeat: no-repeat, repeat-y;
+	background-attachment: scroll, fixed;
+	color: #fff;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+a, a:visited {
+	color: #D67D27;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
+/* ======== Icon Font ========= */
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+/* ======== Animation ========= */
+
+@keyframes findus
+{
+	from { opacity: 0; top: -26px; }
+	to { opacity: 100; top: -16px; }
+}
+
+@-webkit-keyframes findus /* Safari and Chrome */
+{
+	from { opacity: 0; top: -26px; }
+	to { opacity: 100; top: -16px; }
+}
+
+/* ======== Page Wrapper ========= */
+
+.wrapper {
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 940px;
+	height: auto;
+	padding: 0 10px;
+}
+
+/* ======== Page Header ========= */
+
+header {
+	width: 100%;
+	height: 168px;
+	background: #9BB8AB;
+	-moz-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3), 0 5px 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3), 0 5px 4px rgba(0,0,0,0.5);
+	-ms-box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+	box-shadow: inset 0 5px 10px rgba(0,0,0,0.3), 0 4px 7px rgba(0,0,0,0.5);
+	z-index: 5;
+}
+
+#header_upper {
+	margin: 0 auto 0 auto;
+	width: 960px;
+	height: 130px;
+}
+
+#header_upper h1 {
+	float: left;
+	margin-top: 28px;
+	width: 197px;
+	height: 85px;
+	text-indent: -9999px;
+	background: url('../images/logo.png') no-repeat;
+}
+
+#header_upper h1 a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#header_upper div {
+	float: right;
+	margin-top: 28px;
+	width: 760px;
+	height: 85px;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+#header_upper div div {
+	float: left;
+	margin: 0;
+	width: 100%;
+	height: 42px;
+}
+
+#header_upper div div span {
+	display: block;
+	width: 100%;
+	height: auto;
+	color: #fff;
+	text-align: right;
+}
+
+#header_lower {
+	width: 100%;
+	height: 38px;
+	background: url('../images/woodbar.jpg') repeat-x;
+}
+
+#tagline {
+	width: 200px;
+	line-height: 38px;
+	font-family: 'Satisfy', cursive;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* ======== Navigation ========= */
+
+nav {
+	float: left;
+	margin: 0;
+	padding 0;
+	margin-top: 1px;
+	width: 100%;
+	height: 42px;
+}
+
+nav ul {
+	position: relative;
+	float: right;
+	margin-top: 2px;
+	width: 740px;
+	height: 36px;
+	background: #F2F2E1;
+	border: 1px solid #fff;
+	border-left: none;
+	list-style: none;
+	-moz-box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
+	-webkit-box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
+	-ms-box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
+	box-shadow: 0 1px 0 #F2F2E1, 0 -1px 0 #F2F2E1, 1px 0 0 #F2F2E1;
+}
+
+nav ul::after {
+	position:absolute;
+	left: -9px;
+	top: -3px;
+	content: url('../images/nav_background_left.png');
+}
+
+nav ul li {
+	position: relative;
+	display: inline;
+	float: left;
+	padding: 0 15px 0 15px;
+	font-size: 31px;
+	height: 36px;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+nav ul li:first-child {
+	margin-left: 20px;
+}
+
+nav ul li a, nav ul li a:visited {
+	width: auto;
+	height: 35px;
+	line-height: 35px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: bold;
+	color: #9BB8AB;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0 #E8E7CA;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #5E8573;
+	text-decoration: none;
+}
+
+nav ul li a:hover::after {
+	content: url('../images/menu_hover.png');
+	position: absolute;
+	left: 45%;
+	bottom: -8px;
+}
+
+nav ul .findus a:hover::after {
+	content: "";
+}
+
+nav .findus {
+	float: right;
+	border-left: 1px solid #fff;
+	-moz-box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+	-webkit-box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+	-ms-box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+	box-shadow: -1px 0 0 rgba(100,100,100,0.1);
+
+}
+
+nav .findus::after {
+	position: absolute;
+	left: 12px;
+	top: -20px;
+	content: url('../images/findus.png');
+	opacity: 0;
+}
+
+nav .findus:hover::after {
+	animation: findus 0.2s;
+	animation-fill-mode: forwards;
+	-webkit-animation: findus 0.2s; /* Safari and Chrome */
+	-webkit-animation-fill-mode: forwards;
+}
+
+nav .findus a {
+	padding: 0 15px 0 15px;
+}
+
+/* ============================================
+===  General Styling
+=============================================== */
+
+/* ======== Page Content ========= */
+
+#page_content {
+	width: 100%;
+	height: auto;
+}
+
+/* ======== Sidebar ========= */
+
+aside {
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+
+/* ======== Page Content ========= */
+
+article {
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	margin-bottom: 20px;
+	width: 100%;
+	height: auto;
+	color: #fff;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 40px;
+	line-height: 40px;
+}
+
+h4 {
+	margin: 20px 0 10px 0;
+	color: #D67D27;
+	font-size: 18px;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 4px;
+	background: url('../images/dot_white.png') repeat-x;
+	border: none;
+}
+
+section p {
+	margin-bottom: 15px;
+}
+
+/* ======== Chalk Images ========= */
+
+#chalkleft {
+	position: absolute;
+	left: -200px;
+	top: 200px;
+	width: 205px;
+	height: 355px;
+	background: url('../images/chalkleft.png') no-repeat;
+}
+
+#chalkright {
+	position: absolute;
+	right: -200px;
+	top: 0;
+	width: 199px;
+	height: 567px;
+	background: url('../images/chalkright.png') no-repeat;
+}
+
+/* ======== Questions ========= */
+
+#questions {
+	font-size: 11px;
+	text-align: center;
+}
+
+/* ======== Breadcrumbs ========= */
+
+#breadcrumbs ul {
+	margin-top: 20px;
+	list-style: none;
+}
+
+#breadcrumbs ul li {
+	display: inline;
+}
+
+#breadcrumbs ul li::after {
+	margin: 0 6px 0 10px;
+	content: "/";
+}
+
+#breadcrumbs ul li:last-child::after {
+	margin: 0;
+	content: "";
+}
+
+#breadcrumbs ul li a, #breadcrumbs ul li a:visited {
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#breadcrumbs ul li a:hover {
+	text-decoration: underline;
+}
+
+#breadcrumbs ul li:last-child a, #breadcrumbs ul li:last-child a:visited {
+	color: #D67D27;
+}
+
+
+/* ============================================
+===  Homepage Styling
+=============================================== */
+
+#homepage_content {
+	float: right;
+	width: 720px;
+}
+
+/* ======== Flavors Sidebar ========= */
+
+#flavors {
+	margin: 0 auto 0 auto;
+	width: 165px;
+	height: auto;
+}
+
+#flavors div::before {
+	height: 24px;
+	content: url('../images/flavors_top.png');
+}
+
+#flavors div {
+	height: auto;
+	background: url('../images/flavors_bg.png') repeat-y;
+}
+
+#flavors h1 {
+	margin: 0 auto 10px auto;
+	width: 130px;
+	color: #494A4E;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+}
+
+#flavors hr {
+	margin: 0 auto 0 auto;
+	width: 130px;
+	height: 4px;
+	background: url('../images/dot_dark.png') repeat-x;
+}
+
+#flavors ul {
+	margin: 20px auto 0 auto;
+	padding-bottom: 20px;
+	width: 140px;
+	list-style: none;
+}
+
+#flavors ul li {
+	width: 100%;
+	color: #D67D27;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+}
+
+#flavors div:after {
+	position: absolute;
+	content: url('../images/flavors_bottom.png');
+}
+
+/* ======== Welcome ========= */
+
+#welcome {
+	margin-bottom: 0;
+	width: 100%;
+	height: auto;
+}
+
+#welcome h1 {
+	float: left;
+	width: 200px;
+	height: 90px;
+	line-height: 90px;
+	font-family: 'Satisfy', cursive;
+	color: #fff;
+	font-size: 54px;
+	font-weight: normal;
+}
+
+#welcome div {
+	float: right;
+	margin-top: 20px;
+	width: 520px;
+}
+
+#welcome div p {
+	margin-bottom: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: #9BB8AB;
+	font-weight: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* ======== Video ========= */
+
+#video {
+	margin-bottom: 20px;
+	width: 100%;
+	height: auto;
+}
+
+#video div:first-child {
+	float: left;
+	width: 560px;
+	height: 313px;
+	background: #333;
+}
+
+#video div:last-child {
+	float: right;
+	width: 160px;
+	height: 313px;
+	background: #000;
+}
+
+#video div:last-child hr {
+	margin: 0 auto 0 auto;
+	width: 120px;
+}
+
+#video div:last-child h1 {
+	margin: 15px auto 10px auto;
+	width: 120px;
+	height: auto;
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+#video div:last-child p {
+	margin: 15px auto 0 auto;
+	width: 120px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+#video div:last-child a, #video div:last-child a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======== Homepage Content Bottom ========= */
+
+#homepage_bottom div {
+	float: left;
+	margin-right: 33px;
+	width: 150px;
+	height: auto;
+}
+
+#homepage_bottom div:last-child {
+	margin-right: 0;
+	width: 170px;
+}
+
+#homepage_bottom h4 {
+	margin: 0;
+	padding-top: 10px;
+	color: #9BB8AB;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+#homepage_bottom .more {
+	padding-right: 30px;
+	background: url('../images/more.png') right top no-repeat;
+}
+
+#homepage_bottom p {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 14px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+/* ============================================
+===  Story Page
+=============================================== */
+
+#story h1 {
+	font-family: 'Satisfy', cursive;
+}
+
+#story_intro {
+	height: 144px;
+	background: url('../images/we_strive.png') left top no-repeat;
+}
+
+#story_intro p {
+	margin: 0 0 0 245px;
+	padding-top: 35px;
+	width: 700px;
+	font-size: 22px;
+	line-height: 24px;
+}
+
+#dimare {
+	min-height: 335px;
+	background: url('../images/stephen_dimare.png') right 10px no-repeat;
+}
+
+#dimare p {
+	width: 620px;
+}
+
+/* ============================================
+===  Our Foods Page
+=============================================== */
+
+#ourfoods hr {
+	margin-bottom: 15px;
+}
+
+#ourfoods h1 {
+	font-family: 'Satisfy', cursive;
+}
+
+#ourfoods h4 {
+	float: left;
+	margin-top: 0;
+	width: 100%;
+	height: 27px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+#ourfoods a {
+	text-transform: uppercase;
+}
+
+#ourfoods section p {
+	float: left;
+}
+
+#ourfoods section p span {
+	margin: 0 10px 0 10px;
+}
+
+#ourfoods section div {
+	float: right;
+	width: 300px;
+	height: auto;
+}
+
+#ourfoods section div h4, #ourfoods section div ul {
+	float: left;
+}
+
+#ourfoods section div ul {
+	width: 145px;
+}
+
+#ourfoods section div ul:last-child {
+	float: right;
+}
+
+#ourfoods section div li {
+	margin-bottom: 5px;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+/* ======== Pops Section ========= */
+
+#pops {
+	min-height: 290px;
+	background: url('../images/hyppo_pop.png') -10px 50px no-repeat;
+}
+
+#pops p {
+	margin-left: 210px;
+	width: 390px;
+}
+
+#pops h4 {
+	background: url('../images/foods_banner_orange.png') no-repeat;
+}
+
+/* ======== Ice Cream Section ========= */
+
+#icecream p {
+	width: 600px;
+}
+
+#icecream h4 {
+	background: url('../images/foods_banner_purple.png') no-repeat;
+}
+
+/* ======== Sandwiches & Salads Section ========= */
+
+#sandsalads p {
+	width: 600px;
+}
+
+#sandsalads div {
+	position: relative;
+	min-height: 120px;
+	background: url('../images/hyppo_cafe.png') center top no-repeat;
+}
+
+#sandsalads span {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+#sandsalads span a, #sandsalads span a:visited {
+	padding-right: 5px;
+	color: #F2F2E1;
+	text-decoration: none;
+}
+
+#sandsalads span a::after {
+	position: absolute;
+	content: url('../images/more_white.png');
+}
+
+#sandsalads span a:hover {
+	text-decoration: underline;
+}
+
+/* ======== Coffee & Teas Section ========= */
+
+#coffeeteas p {
+	width: 600px;
+}
+
+#coffeeteas h4 {
+	background: url('../images/foods_banner_brown.png') no-repeat;
+}
+
+/* ============================================
+===  Menus Page
+=============================================== */
+
+#menus h1 {
+	font-family: 'Satisfy', cursive;
+}
+
+#menus hr {
+	margin-bottom: 15px;
+}
+
+#menus section:not(#breadcrumbs) ul {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+#menus section:not(#breadcrumbs) ul li {
+	width: 450px;
+	height: auto;
+}
+
+#menus section:not(#breadcrumbs) ul li:first-child {
+	float: left;
+}
+
+#menus section:not(#breadcrumbs) ul li:last-child {
+	float: right;
+}
+
+#menus h5 {
+	margin-bottom: 15px;
+	color: #9BB8AB;
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+#menus section:not(#breadcrumbs) span {
+	display: block;
+	width: 100%;
+	color: #D67D27;
+}
+
+#menus section:not(#breadcrumbs) p {
+	margin-bottom: 15px;
+}
+
+#menus .clearmargin {
+	margin-bottom: 0;
+}
+
+/* ============================================
+===  Find Us Page
+=============================================== */
+
+#find-us h1 {
+	font-family: 'Satisfy', cursive;
+}
+
+#find-us h4, #find-us h5, #find-us p {
+	width: 380px;
+}
+
+#find-us hr {
+	margin-bottom: 15px;
+}
+
+#find-us a, #find-us a:visited {
+	text-transform: inherit;
+}
+
+#findus h5, #findus h4 {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	width: auto;
+	color: #9BB8AB;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+#findus h4 {
+	color: #D67D27;
+}
+
+#findus h4:after {
+	position: absolute;
+	right: -20px;
+	top: -4px;
+	content: url('../images/map_marker_small_blue.png');
+}
+
+#findus .orange {
+	color: #D67D27;
+}
+
+#findus .orange::after {
+	position: absolute;
+	right: -20px;
+	top: -4px;
+	content: url('../images/map_marker_small_orange.png');
+}
+
+#findus p {
+	margin-bottom: 20px;
+}
+
+#findus div {
+	float: right;
+	width: 540px;
+	height: 530px;
+	background: #fff;
+}
+
+#findus div a, #findus div a:visited {
+	color: #eee;
+	text-decoration: none;
+	text-transform: uppercase
+}
+
+#findus div a:hover {
+	text-decoration: underline;
+}
+
+#moreinfo h4 {
+	margin-bottom: 0;
+	color: #D67D27;
+}
+
+#moreinfo p {
+	width: 100%;
+	color: #fff;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+/* ============================================
+===  Footer
+=============================================== */
+
+footer {
+	margin-top: 10px;
+	width: 100%;
+	height: 38px;
+	background: url('../images/woodbar.jpg') repeat-x;
+}
+
+footer .wrapper {
+	line-height: 38px;
+	text-align: center;
+}
+
+footer div {
+	display: block;
+	width: auto;
+	height: auto;
+}
+
+#follow a {
+	display: block;
+	margin: 0 auto 0 auto;
+	width: 200px;
+	height: 30px;
+	color: #889FB7;
+	text-decoration: none;
+}
+
+#follow a img {
+	float: left;
+}
+
+#follow a span {
+	display: block;
+	float: right;
+	line-height: 35px;
+}
