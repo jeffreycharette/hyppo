@@ -170,7 +170,7 @@ var wc = require('wc/utils'),
 			/* flattern the value of the document to the key */
 			_.each(v.doc, function(val, key) {
 				if (globalKeys.indexOf(key) === -1 || key === 'template') {
-					className = (typeof val.options === 'undefined') ? '' : val.options.widget.type.replace('-','_').replace(/ /g,'_');
+					className = (typeof val.options === 'undefined') ? '' : val.options.widget.type.replace('-','_').replace("'","").replace(/ /g,'_');
 					if (typeof val.value === 'object') {
 				        doc[k][key] = (className !== "query") ? _.flatten(val.value) : '<span class="wc-query">' + JSON.stringify(val.value) + '</span>';
 				  	}
@@ -188,7 +188,7 @@ var wc = require('wc/utils'),
 			});
 			if (typeof v.doc != 'undefined') {
 				if (v.doc['category']) {
-					doc[k]['classname'] = v.doc['category'].value.toLowerCase().replace('&','').replace(/-/g, '').replace(/ /g,'');
+					doc[k]['classname'] = v.doc['category'].value.toLowerCase().replace('&','').replace("'","").replace(/-/g, '').replace(/ /g,'');
 				}
 			}
 			delete v.doc;
@@ -216,7 +216,7 @@ var wc = require('wc/utils'),
 				doc[k] = wc.render(template, req, v);
 			}
 			if (!!editor && contentType === 'html') {
-				doc[k] = '<span class="wc_editable" id="' + v.id.replace('-','_').replace(/ /g,'_') + '">' + doc[k] + '</span>';
+				doc[k] = '<span class="wc_editable" id="' + v.id.replace('-','_').replace("'","").replace(/ /g,'_') + '">' + doc[k] + '</span>';
 			}
 		});
 		
@@ -327,7 +327,7 @@ var wc = require('wc/utils'),
 			_.each(v.doc, function(val, key) {
 				if (globalKeys.indexOf(key) === -1 || key === 'template') {
 					typeName = (typeof val.type === 'undefined') ? '' : val.type.replace(/ /g,'_');
-					className = (typeof val.options === 'undefined') ? '' : val.options.widget.type.replace('-','_').replace(/ /g,'_');
+					className = (typeof val.options === 'undefined') ? '' : val.options.widget.type.replace("'","").replace('-','_').replace(/ /g,'_');
 					if (typeName === "boolean" || val.value === "" || key === 'template' || typeName === "meta") {
 						doc[k][key] = val.value;
 					}
@@ -335,7 +335,7 @@ var wc = require('wc/utils'),
 				        doc[k][key] = (className !== "query") ? _.flatten(val.value) : '<span class="wc-query">' + JSON.stringify(val.value) + '</span>';
 				    }
 				 	else {
-				        doc[k][key] = '<span class="wc_editable ' + 'wc-' + typeName + '-' + className + '" id="' + v.id.replace('-','_').replace(/ /g,'_') + '-' + key.replace('-','_').replace(/ /g,'_') + '">' + val.value + '</span>';
+				        doc[k][key] = '<span class="wc_editable ' + 'wc-' + typeName + '-' + className + '" id="' + v.id.replace("'","").replace('-','_').replace(/ /g,'_') + '-' + key.replace('-','_').replace(/ /g,'_') + '">' + val.value + '</span>';
 				    }
 					if (val.type === 'array') {
 						doc[k][key] = utils.parseCSV(val.value.toString() || '')[0] || [];
@@ -358,9 +358,9 @@ var wc = require('wc/utils'),
 				}
 			}
 			if (v.doc['category']) {
-				doc[k]['classname'] = v.doc['category'].value.toLowerCase().replace('&','').replace(/-/g, '').replace(/ /g,'');
+				doc[k]['classname'] = v.doc['category'].value.toLowerCase().replace('&','').replace("'","").replace(/-/g, '').replace(/ /g,'');
 			}
-			doc[k]['pin'] = '<div class="wc_editable wc-text-pin" style="position:relative;" id="' + v.id.replace('-','_').replace(/ /g,'_') + '-pin"> </div>';
+			doc[k]['pin'] = '<div class="wc_editable wc-text-pin" style="position:relative;" id="' + v.id.replace("'","").replace('-','_').replace(/ /g,'_') + '-pin"> </div>';
 			
 			delete v.doc;
 

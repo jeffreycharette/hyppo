@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html -->
+<html lang="en"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Apache CouchDB - Futon: View Document</title>
+    
+    <link rel="stylesheet" href="./Apache CouchDB - Futon  View Document_files/layout.css" type="text/css">
+    <script src="./Apache CouchDB - Futon  View Document_files/json2.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/sha1.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/base64.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/jquery.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/jquery.couch.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/jquery.dialog.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/futon.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/jquery.resizer.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/futon.browse.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/futon.format.js"></script>    
+    <script src="./Apache CouchDB - Futon  View Document_files/jquery.editinline.js"></script>
+    <script src="./Apache CouchDB - Futon  View Document_files/jquery.form.js"></script>
+    <script>
+      var page = new $.futon.CouchDocumentPage();
+
+      $.futon.navigation.ready(function() {
+        this.addDatabase(page.db.name);
+        this.updateSelection(
+          location.pathname.replace(/document\.html/, "database.html"),
+          "?" + page.db.name
+        );
+      });
+
+      $(function() {
+        $("h1 a.dbname").text(page.dbName)
+          .attr("href", "database.html?" + encodeURIComponent(page.db.name));
+        $("h1 strong").text(page.docId);
+        $("h1 a.raw").attr("href", "/" + encodeURIComponent(page.db.name) +
+          "/" + encodeURIComponent(page.docId));
+        page.updateFieldListing();
+
+        $("#tabs li.tabular a").click(page.activateTabularView);
+        $("#tabs li.source a").click(page.activateSourceView);
+
+        $("#toolbar button.save").click(page.saveDocument);
+        $("#toolbar button.add").click(page.addField);
+        $("#toolbar button.load").click(page.uploadAttachment);
+        if (page.isNew) {
+          $("#toolbar button.delete").hide();
+        } else {
+          $("#toolbar button.delete").click(page.deleteDocument);
+        }
+      });
+    </script>
+  <meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;jQuery&quot;:&quot;1.8.3&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script></head>
+
+  <body class=""><div id="wrap">
+    <h1>
+      <a href="http://127.0.0.1:5984/_utils/index.html">Overview</a>
+      <a class="dbname" href="http://127.0.0.1:5984/_utils/database.html?menuat">menuat</a>
+      <strong>dashboard.html</strong>
+      <a class="raw" title="Raw document" href="http://127.0.0.1:5984/menuat/dashboard.html"></a>
+    </h1>
+    <div id="content">
+      <ul id="toolbar">
+        <li><button class="save">Save Document</button></li>
+        <li><button class="add">Add Field</button></li>
+        <li><button class="load">Upload Attachment…</button></li>
+        <li><button class="delete">Delete Document…</button></li>
+      </ul>
+
+      <ul id="tabs">
+        <li class="tabular"><a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#tabular">Fields</a></li>
+        <li class="source active"><a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#source">Source</a></li>
+      </ul>
+      <table id="fields" class="listing" cellspacing="0">
+        <colgroup><col class="field"><col class="value">
+        </colgroup><caption>Fields</caption>
+        <thead>
+          <tr>
+            <th colspan="2">Source</th>
+            <th style="display: none;">Value</th>
+          </tr>
+        </thead>
+        <tbody class="content" style="display: none;"><tr><th><b>_id</b></th><td><code class="string">dashboard.html</code></td></tr><tr class="odd"><th><b>_rev</b></th><td><code class="string">1-59f3484df1132a0498f601643ee206cd</code></td></tr><tr><th><button type="button" class="delete" title="Delete field"></button><b title="Double click to edit">assets</b></th><td title="Double click to edit"><dl><dt class="inline">value</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">type</dt><dd class="inline"><code class="string">attachments</code></dd><dt class="collapsed">options</dt><dd style="display: none;"><dl><dt class="inline">className</dt><dd class="inline"><code class="string"></code></dd><dt class="inline">label</dt><dd class="inline"><code class="string"></code></dd><dt class="inline">required</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="inline">omit_empty</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="inline">default_value</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="collapsed">widget</dt><dd style="display: none;"><dl><dt class="inline">classes</dt><dd class="inline"><code class="array">[
+]</code></dd><dt class="inline">options</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">type</dt><dd class="inline"><code class="string">file</code></dd><dt class="inline">val</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">name</dt><dd class="inline"><code class="string">assets</code></dd></dl></dd><dt class="inline">permissions</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">validators</dt><dd class="inline"><code class="array">[
+]</code></dd></dl></dd></dl></td></tr><tr class="odd"><th><button type="button" class="delete" title="Delete field"></button><b title="Double click to edit">items</b></th><td title="Double click to edit"><dl><dt class="collapsed">value</dt><dd style="display: none;"><dl><dt class="inline">key</dt><dd class="inline"><code class="string">category</code></dd><dt class="inline">sort</dt><dd class="inline"><code class="string">order</code></dd></dl></dd><dt class="inline">type</dt><dd class="inline"><code class="string">string</code></dd><dt class="collapsed">options</dt><dd style="display: none;"><dl><dt class="inline">className</dt><dd class="inline"><code class="string">hidden</code></dd><dt class="inline">label</dt><dd class="inline"><code class="string"></code></dd><dt class="inline">required</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="inline">omit_empty</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="collapsed">default_value</dt><dd style="display: none;"><dl><dt class="inline">key</dt><dd class="inline"><code class="string">category</code></dd><dt class="inline">sort</dt><dd class="inline"><code class="string">order</code></dd></dl></dd><dt class="collapsed">widget</dt><dd style="display: none;"><dl><dt class="inline">classes</dt><dd class="inline"><code class="array">[
+]</code></dd><dt class="inline">options</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">type</dt><dd class="inline"><code class="string">query</code></dd></dl></dd><dt class="inline">permissions</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">validators</dt><dd class="inline"><code class="array">[
+]</code></dd></dl></dd></dl></td></tr><tr><th><button type="button" class="delete" title="Delete field"></button><b title="Double click to edit">permissions</b></th><td title="Double click to edit"><dl><dt class="inline">add</dt><dd class="inline"><code class="boolean">true</code></dd><dt class="inline">update</dt><dd class="inline"><code class="boolean">true</code></dd><dt class="inline">remove</dt><dd class="inline"><code class="boolean">true</code></dd><dt class="inline">owner</dt><dd class="inline"><code class="string">member</code></dd></dl></td></tr><tr class="odd"><th><button type="button" class="delete" title="Delete field"></button><b title="Double click to edit">template</b></th><td title="Double click to edit"><dl><dt class="inline">value</dt><dd class="inline"><code class="string">dashboard.html</code></dd><dt class="inline">type</dt><dd class="inline"><code class="string">string</code></dd><dt class="collapsed">options</dt><dd style="display: none;"><dl><dt class="inline">className</dt><dd class="inline"><code class="string">lookup</code></dd><dt class="inline">label</dt><dd class="inline"><code class="string">template</code></dd><dt class="inline">required</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="inline">default_value</dt><dd class="inline"><code class="string">dashboard.html</code></dd><dt class="inline">omit_empty</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="collapsed">widget</dt><dd style="display: none;"><dl><dt class="inline">classes</dt><dd class="inline"><code class="array">[
+]</code></dd><dt class="collapsed">options</dt><dd style="display: none;"><dl><dt class="inline">values</dt><dd class="inline"><code class="array">[
+]</code></dd><dt class="inline">view</dt><dd class="inline"><code class="string">_templates</code></dd></dl></dd><dt class="inline">type</dt><dd class="inline"><code class="string">selectlookup</code></dd><dt class="inline">values</dt><dd class="inline"><code class="array">[
+]</code></dd></dl></dd><dt class="inline">permissions</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">validators</dt><dd class="inline"><code class="array">[
+]</code></dd></dl></dd></dl></td></tr><tr><th><button type="button" class="delete" title="Delete field"></button><b title="Double click to edit">title</b></th><td title="Double click to edit"><dl><dt class="inline">value</dt><dd class="inline"><code class="string">@ Menuat Dashboard</code></dd><dt class="inline">type</dt><dd class="inline"><code class="string">string</code></dd><dt class="collapsed">options</dt><dd style="display: none;"><dl><dt class="inline">className</dt><dd class="inline"><code class="string"></code></dd><dt class="inline">label</dt><dd class="inline"><code class="string"></code></dd><dt class="inline">required</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="inline">omit_empty</dt><dd class="inline"><code class="boolean">false</code></dd><dt class="inline">default_value</dt><dd class="inline"><code class="string">@ Menuat Dashboard</code></dd><dt class="collapsed">widget</dt><dd style="display: none;"><dl><dt class="inline">classes</dt><dd class="inline"><code class="array">[
+]</code></dd><dt class="inline">options</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">type</dt><dd class="inline"><code class="string">text</code></dd></dl></dd><dt class="inline">permissions</dt><dd class="inline"><code class="object">{
+}</code></dd><dt class="inline">validators</dt><dd class="inline"><code class="array">[
+]</code></dd></dl></dd></dl></td></tr><tr class="odd"><th><button type="button" class="delete" title="Delete field"></button><b title="Double click to edit">type</b></th><td title="Double click to edit"><code class="string">page</code></td></tr></tbody>
+        <tbody class="source" style="">
+          <tr><td colspan="2" title="Double click to edit" class=""><pre><code class="object">{
+   "<code class="key">_id</code>": <code class="string">"dashboard.html"</code>,
+   "<code class="key">_rev</code>": <code class="string">"1-59f3484df1132a0498f601643ee206cd"</code>,
+   "<code class="key">template</code>": <code class="object">{
+       "<code class="key">value</code>": <code class="string">"dashboard.html"</code>,
+       "<code class="key">type</code>": <code class="string">"string"</code>,
+       "<code class="key">options</code>": <code class="object">{
+           "<code class="key">className</code>": <code class="string">"lookup"</code>,
+           "<code class="key">label</code>": <code class="string">"template"</code>,
+           "<code class="key">required</code>": <code class="boolean">false</code>,
+           "<code class="key">default_value</code>": <code class="string">"dashboard.html"</code>,
+           "<code class="key">omit_empty</code>": <code class="boolean">false</code>,
+           "<code class="key">widget</code>": <code class="object">{
+               "<code class="key">classes</code>": <code class="array">[
+               ]</code>,
+               "<code class="key">options</code>": <code class="object">{
+                   "<code class="key">values</code>": <code class="array">[
+                   ]</code>,
+                   "<code class="key">view</code>": <code class="string">"_templates"</code>
+               }</code>,
+               "<code class="key">type</code>": <code class="string">"selectlookup"</code>,
+               "<code class="key">values</code>": <code class="array">[
+               ]</code>
+           }</code>,
+           "<code class="key">permissions</code>": <code class="object">{
+           }</code>,
+           "<code class="key">validators</code>": <code class="array">[
+           ]</code>
+       }</code>
+   }</code>,
+   "<code class="key">type</code>": <code class="string">"page"</code>,
+   "<code class="key">title</code>": <code class="object">{
+       "<code class="key">value</code>": <code class="string">"@ Menuat Dashboard"</code>,
+       "<code class="key">type</code>": <code class="string">"string"</code>,
+       "<code class="key">options</code>": <code class="object">{
+           "<code class="key">className</code>": <code class="string">""</code>,
+           "<code class="key">label</code>": <code class="string">""</code>,
+           "<code class="key">required</code>": <code class="boolean">false</code>,
+           "<code class="key">omit_empty</code>": <code class="boolean">false</code>,
+           "<code class="key">default_value</code>": <code class="string">"@ Menuat Dashboard"</code>,
+           "<code class="key">widget</code>": <code class="object">{
+               "<code class="key">classes</code>": <code class="array">[
+               ]</code>,
+               "<code class="key">options</code>": <code class="object">{
+               }</code>,
+               "<code class="key">type</code>": <code class="string">"text"</code>
+           }</code>,
+           "<code class="key">permissions</code>": <code class="object">{
+           }</code>,
+           "<code class="key">validators</code>": <code class="array">[
+           ]</code>
+       }</code>
+   }</code>,
+   "<code class="key">assets</code>": <code class="object">{
+       "<code class="key">value</code>": <code class="object">{
+       }</code>,
+       "<code class="key">type</code>": <code class="string">"attachments"</code>,
+       "<code class="key">options</code>": <code class="object">{
+           "<code class="key">className</code>": <code class="string">""</code>,
+           "<code class="key">label</code>": <code class="string">""</code>,
+           "<code class="key">required</code>": <code class="boolean">false</code>,
+           "<code class="key">omit_empty</code>": <code class="boolean">false</code>,
+           "<code class="key">default_value</code>": <code class="object">{
+           }</code>,
+           "<code class="key">widget</code>": <code class="object">{
+               "<code class="key">classes</code>": <code class="array">[
+               ]</code>,
+               "<code class="key">options</code>": <code class="object">{
+               }</code>,
+               "<code class="key">type</code>": <code class="string">"file"</code>,
+               "<code class="key">val</code>": <code class="object">{
+               }</code>,
+               "<code class="key">name</code>": <code class="string">"assets"</code>
+           }</code>,
+           "<code class="key">permissions</code>": <code class="object">{
+           }</code>,
+           "<code class="key">validators</code>": <code class="array">[
+           ]</code>
+       }</code>
+   }</code>,
+   "<code class="key">items</code>": <code class="object">{
+       "<code class="key">value</code>": <code class="object">{
+           "<code class="key">key</code>": <code class="string">"category"</code>,
+           "<code class="key">sort</code>": <code class="string">"order"</code>
+       }</code>,
+       "<code class="key">type</code>": <code class="string">"string"</code>,
+       "<code class="key">options</code>": <code class="object">{
+           "<code class="key">className</code>": <code class="string">"hidden"</code>,
+           "<code class="key">label</code>": <code class="string">""</code>,
+           "<code class="key">required</code>": <code class="boolean">false</code>,
+           "<code class="key">omit_empty</code>": <code class="boolean">false</code>,
+           "<code class="key">default_value</code>": <code class="object">{
+               "<code class="key">key</code>": <code class="string">"category"</code>,
+               "<code class="key">sort</code>": <code class="string">"order"</code>
+           }</code>,
+           "<code class="key">widget</code>": <code class="object">{
+               "<code class="key">classes</code>": <code class="array">[
+               ]</code>,
+               "<code class="key">options</code>": <code class="object">{
+               }</code>,
+               "<code class="key">type</code>": <code class="string">"query"</code>
+           }</code>,
+           "<code class="key">permissions</code>": <code class="object">{
+           }</code>,
+           "<code class="key">validators</code>": <code class="array">[
+           ]</code>
+       }</code>
+   }</code>,
+   "<code class="key">permissions</code>": <code class="object">{
+       "<code class="key">add</code>": <code class="boolean">true</code>,
+       "<code class="key">update</code>": <code class="boolean">true</code>,
+       "<code class="key">remove</code>": <code class="boolean">true</code>,
+       "<code class="key">owner</code>": <code class="string">"member"</code>
+   }</code>
+}</code></pre></td></tr>
+        </tbody>
+        <tbody class="footer">
+          <tr>
+            <td colspan="2">
+              <div id="paging">
+                <a class="prev">← Previous Version</a> | <a class="next">Next Version →</a>
+              </div>
+              <span></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  <!--
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
+-->
+<div id="sidebar">
+  <a id="sidebar-toggle" href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#" title="Hide Sidebar"></a>
+  <a href="http://127.0.0.1:5984/_utils/index.html">
+    <img id="logo" src="./Apache CouchDB - Futon  View Document_files/logo.png" width="175" height="150" alt="Apache CouchDB: Relax">
+  </a>
+  <ul id="nav">
+    <li><span>Tools</span><ul>
+      <li><a href="http://127.0.0.1:5984/_utils/index.html">Overview</a></li>
+      <li><a href="http://127.0.0.1:5984/_utils/config.html">Configuration</a></li>
+      <li><a href="http://127.0.0.1:5984/_utils/replicator.html">Replicator</a></li>
+      <li><a href="http://127.0.0.1:5984/_utils/status.html">Status</a></li>
+      <!-- <li><a href="plugins.html">Plugins</a></li> -->
+    </ul></li>
+    <li><span>Documentation</span><ul>
+      <li><a href="http://127.0.0.1:5984/_utils/docs/">Manual</a></li>
+    </ul></li>
+    <li><span>Diagnostics</span><ul>
+      <li><a href="http://127.0.0.1:5984/_utils/verify_install.html">Verify Installation</a></li>
+      <!-- These tests are run during installation, so this link is disabled by default. -->
+      <!-- <li><a href="couch_tests.html?script/couch_tests.js">Test Suite</a></li> -->
+    </ul></li>
+    <li class="selected"><span>Recent Databases</span>
+      <ul id="dbs"><li><button class="remove" title="Remove from list" value="_users"></button><a href="http://127.0.0.1:5984/_utils/database.html?_users" title="_users">_users</a></li><li><button class="remove" title="Remove from list" value="endue"></button><a href="http://127.0.0.1:5984/_utils/database.html?endue" title="endue">endue</a></li><li><button class="remove" title="Remove from list" value="fl_32084_kookaburra"></button><a href="http://127.0.0.1:5984/_utils/database.html?fl_32084_kookaburra" title="fl_32084_kookaburra">fl_32084_kookaburra</a></li><li class="selected"><button class="remove" title="Remove from list" value="menuat"></button><a href="http://127.0.0.1:5984/_utils/database.html?menuat" title="menuat">menuat</a></li></ul>
+    </li>
+  </ul>
+  <div id="footer">
+    <span id="userCtx">
+      <span class="loggedout" style="display: none;">
+        <a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#" class="signup">Signup</a> or <a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#" class="login">Login</a>
+      </span>
+      <span class="loggedin" style="display: inline;">
+        Welcome <a class="name" href="http://127.0.0.1:5984/_utils/document.html?_users/org.couchdb.user%3AJeff">Jeff</a>!
+        <br>
+        <span class="loggedinadmin" style="display: inline;">
+          <a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#" class="createadmin">Setup more admins</a> or
+          <br>
+        </span>
+        <a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#" class="changepass">Change password</a> or
+        <a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#" class="logout">Logout</a>
+      </span>
+      <span class="adminparty" style="display: none;">
+        Welcome to Admin Party!
+        <br>
+        Everyone is admin. <a href="http://127.0.0.1:5984/_utils/document.html?menuat/dashboard.html#" class="createadmin">Fix this</a>
+      </span>
+    </span>
+    <hr>
+    <span class="couch">
+      Futon on <a href="http://couchdb.apache.org/">Apache CouchDB</a>
+      <span id="version">1.5.0</span>
+    </span>
+  </div>
+</div>
+</div>
+
+<iframe id="rdbIndicator" width="100%" height="270" border="0" src="./Apache CouchDB - Futon  View Document_files/indicator.html" style="display: none; border: 0; position: fixed; left: 0; top: 0; z-index: 2147483647"></iframe></body></html>

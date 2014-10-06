@@ -1,0 +1,9 @@
+{{{pin}}
+		<div id="{{_id}}" class="slide{{#if hide}} hide{{/if}}{{#if fullscreen}} fullscreen{{/if}}">
+			{{#if title}}<div class="cycle-caption">{{{title}}}</div>{{/if}}
+			{{#if slide}}
+			{{#each slide}}
+			<img {{#if ../fullscreen}}width="1080" height="1920" {{/if}}src="{{basePath}}/{{name}}" />
+			{{/each}}
+			{{/if}}
+		</div>

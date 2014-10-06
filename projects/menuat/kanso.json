@@ -8,7 +8,7 @@
 	"handlebars": {
 		"templates": "static/templates"
 	},
-	"host": "http://menuat.com",
+	"host": "http://localhost:5984",
 	"dependencies": {
 		"modules": null,
 		"properties": null,

@@ -1,0 +1,6 @@
+{{{pin}}}
+<div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}} bottom-slideshow" screen="{{screen}}">
+	<div class="cycle-slideshow auto category {{classname}}" data-cycle-slides='.slide' data-cycle-next='.slide' {{#if easing}} data-cycle-speed="{{speed}}"{{/if}}{{#if easing}} data-cycle-easing="{{easing}}"{{/if}}{{#if effect}} data-cycle-fx="{{effect}}"{{/if}}{{#if transition}} data-cycle-timeout={{transition}}{{/if}}>
+	{{{items}}}
+	</div>
+</div>

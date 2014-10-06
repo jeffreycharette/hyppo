@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Menuat Sweet Auburn</title>
+	<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/Main.css">
+	<script type="text/javascript" src="Javascript/Main.js"></script>
+	<script type="text/javascript">
+	var timer = setTimeout('autoRefresh()', 15000);
+	function autoRefresh() {
+		window.location = window.location.href;
+	}
+	function onLoadHandler() {
+	    clearTimeout(timer);
+	}
+	</script>
+</head>
+
+<body class="flip" onload="Main.onLoad();">
+	<iframe src="http://menuat.com/illy?resolution=1080#menu1" height="1920" width="1080" onload="onLoadHandler();"></iframe>
+</body>
+</html>

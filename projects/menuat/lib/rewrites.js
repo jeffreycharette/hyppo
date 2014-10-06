@@ -3,7 +3,11 @@
  */
 
 module.exports = [
-	{from: '/_hostmanager/healthcheck', to: '/static/healthcheck.xml'},
+	{from: '/healthcheck', to: '/static/healthcheck.json'},
+	{from: '/deploy', to: '/static/deploy/index.html'},
+	{from: '/sssp2-0/*', to: '/static/deploy/sssp2-0/*'},
+	{from: '/sweetauburn1/*', to: '/static/deploy/sweetauburn1/*'},
+	{from: '/sweetauburn2/*', to: '/static/deploy/sweetauburn2/*'},
 	{from: '/cache.manifest', to: '_show/cache'},
 	{from: '/_show/*', to: '/_show/*'},
 	{from: '/_update/*', to: '/_update/*'},
@@ -27,6 +31,8 @@ module.exports = [
 	{from: '/spacetime', to: '_show/inspector/spacetime'},
 	{from: '/edit', to: '_show/edit_page/index.html'},
 	{from: '/edit/*', to: '_show/edit_page/*'},
+	{from: '/dashboard', to: '_show/dashboard/dashboard.html'},
+	{from: '/dashboard/*', to: '_show/dashboard/*'},
 	{from: '/search/*', to: '../../../_fti/local/menuat/_design/search/*'},
 	{from: '/', to: '_show/page/index.html'},
 	{from: '/*', to: '_show/page/*'}

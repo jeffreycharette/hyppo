@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Menuat Deploy</title>
+	<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/Main.css">
+	<script type="text/javascript" src="Javascript/Main.js"></script>
+	<script type="text/javascript">
+	var urlParam = function(name) {
+	  var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	  if (results==null){
+	     return null;
+	  }
+	  else{
+	     return results[1] || 0;
+	  }
+	};
+	function setText(id,newvalue) {
+	  var s= document.getElementById(id);
+	  s.innerHTML = newvalue;
+	}
+	var client = urlParam('client') || 'deploy',
+		resolution = parseInt(urlParam('resolution')) || 1920,
+		hash = window.location.hash || '',
+		frame = '';
+	var retry = window.setTimeout(function() {
+			setText("log",client);
+			frame = document.getElementById('contents');
+	    if (frame.contentWindow.document.readyState === "complete") {
+				frame.src = 'http://localhost:5984/' + client + '?resolution=' + resolution + hash;
+	      window.clearTimeout(retry);
+	    }
+	}, 15000);
+	</script>
+</head>
+<body class="flip" onload="Main.onLoad();">
+	<h1 id="log"><div>log</div></h1>
+	<iframe id="contents" src="http://localhost:5984/deploy/" height="1920" width="1080"></iframe>
+</body>
+</html>

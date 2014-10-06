@@ -1,0 +1,25 @@
+body {
+	width:1080px !important;
+	height: 1920px !important;
+	/* position:absolute; */
+	top:0;
+	left:0;
+	background: #FFFFFF;
+}
+* {
+	padding:0;
+	margin:0;
+	border:0;
+	top:0;
+	left:0;
+}
+.flip {
+	position:fixed;
+	top:-420px;
+	left:420px;
+	-webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}

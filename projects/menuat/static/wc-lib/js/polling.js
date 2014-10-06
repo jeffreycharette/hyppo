@@ -46,49 +46,44 @@ else {
 		}, timeout);
 	}
 }
-if (hash.indexOf("menu2") > -1 && property === 'pulp') {
-	$('body').bind('queryDone', function() {
-		$('.coffee, .tea, .frozenyogurt, .breakfast, .kombucha, .organicbeer, .organicwine, .freshpremiumjuices, .supersmoothies, .freshjuiceshots, .freshpremiumjuices, .extras').hide();
-	});
-}
-else if (hash.indexOf("menu3") > -1 && property === 'pulp') {
-	$('body').bind('queryDone', function() {
-		$('.coffee, .tea, .frozenyogurt, .breakfast, .kombucha, .organicbeer, .organicwine, .smoothies, .logo').hide();
-	});
-}
-else if (hash.indexOf("menu1") > -1 && property === 'pulp') {
-	$('body').bind('queryDone', function() {
-		$('.smoothies, .logo, .freshpremiumjuices, .smoothies, .supersmoothies, .freshjuiceshots, .freshpremiumjuices, .extras').hide();
-	});
-}
-if ( hash.indexOf("menu1") > -1  || hash.indexOf("screen") > -1 ) {
-	if (property === 'staugamp') {
-		$('body').bind('queryDone', function() {
-			$('.message, #lean_overlay').hide();
-		});
+//need to make this scale up to X screens or menus
+//need to hide only attribute screen elements that do not contain specific number not including elements where screen attribute not included
+$('body').bind('queryDone', function() {
+	if (property === 'illy' && window.location.href.indexOf('/edit/') > 0) {
+		$( '.bottom-slideshow .cycle-slideshow' ).cycle('destroy');
+		$( '.cycle-sentinel' ).remove();
+		$( '.cycle-caption, .bottom-slideshow, .fullscreen' ).attr('style', function(i,s) { return 'position: static !important;' });
 	}
-	setTimeout(function() {
+	else {
+		$( '.cycle-slideshow' ).cycle();
+	}
+	if (hash.indexOf("menu1") > -1 || hash.indexOf("screen") > -1 ) {
+		if (property === 'staugamp') {
+			$('.message, #lean_overlay').hide();
+		}
+		$(".wrapper[screen*='2'], .wrapper[screen*='3'], .wrapper[screen*='4']").hide();
+		$(".wrapper[screen*='1']").show();
 		window.scrollTo(0, 0);
-	}, 1000);
-}
-else if ( hash.indexOf("menu2") > -1 ) {
-	setTimeout(function() {
+	}
+	else if (hash.indexOf("menu2") > -1) {
+		$(".wrapper[screen*='1'], .wrapper[screen*='3'], .wrapper[screen*='4']").hide();
+		$(".wrapper[screen*='2']").show();
 		var pos = parseInt($('#position').text());
 		window.scrollTo(pos, 0);
-	}, 1000);
-}
-else if ( hash.indexOf("menu3") > -1 ) {
-	setTimeout(function() {
+	}
+	else if (hash.indexOf("menu3") > -1) {
+		$(".wrapper[screen*='1'], .wrapper[screen*='2'], .wrapper[screen*='4']").hide();
+		$(".wrapper[screen*='3']").show();
 		var pos = parseInt($('#position').text());
 		window.scrollTo(pos * 2, 0);
-	}, 1000);
-}
-else if ( hash.indexOf("menu4") > -1 ) {
-	setTimeout(function() {
+	}
+	else if (hash.indexOf("menu4") > -1) {
+		$(".wrapper[screen*='1'], .wrapper[screen*='2'], .wrapper[screen*='3']").hide();
+		$(".wrapper[screen*='4']").show();
 		var pos = parseInt($('#position').text());
 		window.scrollTo((pos * 3)+5, 0);
-	}, 1000);
-}
+	}
+});
 
 var checkSave = function(hash) {
 	//var h = new Date().getHours();

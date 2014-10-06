@@ -1,0 +1,284 @@
+/*-------------------------------------------------------
+-- General
+-------------------------------------------------------*/
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: #FFFFFF;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #59595B;
+	font-size: 28px;
+	font-weight: 300;
+	padding-bottom: 0;
+}
+
+.container-fluid {
+	padding: 15px;
+	padding-bottom: 0;
+}
+
+/*-------------------------------------------------------
+-- Layout
+-------------------------------------------------------*/
+
+#bg-slideshow {
+	z-index: -2;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	overflow: hidden;
+	opacity: 1;
+}
+
+#bg-slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+
+.wrapper {
+	display: block;
+	width: 100%;
+	padding-bottom: 15px;
+}
+.logo {
+	background: none;
+	border: none;
+	box-shadow: none;
+	text-align: center;
+	-webkit-box-shadow: none;
+	padding-top: 0 !important;
+}
+.logo img {
+	background: none;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	width: 100%;
+}
+.wrapper {
+	padding-top: 7px;
+}
+
+.wrapper ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.wrapper ul li {
+	line-height: 120%;
+}
+
+.category-title h2, .heading h3  {
+	font-weight: 400;
+	color: #FF0000;
+	font-size: 26px;
+	margin-bottom: 0;
+	margin-top: 9px;
+	letter-spacing: 1px;
+	line-height: 39px;
+	text-transform: uppercase;
+}
+.heading h3 {
+	color: #59595B;
+	font-size: 20px;
+}
+.category-title h2 img {
+	bottom: 5px;
+	margin-left: 13px;
+	position: absolute;
+}
+.legendrow, hr {
+	display: none;
+}
+.currency {
+	display: none;
+}
+.title, .price {
+	font-size: 41px;
+	font-weight: 400;
+}
+.price {
+	font-size: 300;
+}
+.heading, .price {
+	text-align: right;
+	white-space: nowrap;
+	text-align: center;
+}
+.flavors {
+	display: block;
+	font-weight: 400;
+}
+.illylogo {
+position: absolute;
+bottom: 54px;
+right: 74px;
+z-index: 200;
+}
+
+/*-------------------------------------------------------
+-- Event
+-------------------------------------------------------*/
+.event .image {
+	max-height: 280px;
+	min-height: 100px;
+}
+.event img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.event {
+	font-size: 41px;
+}
+.event .row {
+	margin-top: 25px;
+	padding-top: 25px !important;
+}
+.wrapper .event ul:not(.category) {
+	padding-top: 25px;
+}
+
+/*-------------------------------------------------------
+-- Overrides
+-------------------------------------------------------*/
+.red, .push, .push li, .push li h2, .push li h3 {
+	color: #F8A431;
+}
+small {
+	font-size: 75%;
+}
+.row-fluid {
+	column-gap: 11px;
+	-moz-column-gap: 11px;
+	-webkit-column-gap: 11px;
+}
+.smoothies .processing, .freshpremiumjuices .processing, .extras .processing {
+	display: block;
+	font-size: 14px;
+	column-count: 2;
+	-webkit-column-count: 2;
+}
+.root {padding-top: 5px;}
+.cycle-caption {
+	background: #EA202D;
+	position: absolute;
+	width: 413px;
+	bottom: 46px;
+	left: 0;
+	height: 69px;
+	color: #FFFFFF;
+	text-align: right;
+	padding-right: 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 69px;
+}
+.bottom-slideshow {
+	position: absolute;
+	bottom: 0;
+	width: auto;
+	left: 0;
+	padding-bottom: 0;
+}
+
+@media (min-width: 1080px) {
+	body {
+		padding-top: 0;
+	}
+	.row-fluid {
+		column-count: 1;
+		-webkit-column-count: 1;
+		column-gap: 20px;
+		-webkit-column-gap: 20px;
+		min-height: 1280px;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.title, .processing > .row {
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+	.navbar {
+		display: none;
+	}
+}
+@media (max-width: 1079px) {
+	.container-fluid, .container-fluid .row-fluid {
+		padding: 10px !important;
+	}
+	.row-fluid {
+		height: auto !important;
+		width: auto !important;
+	}
+}
+/*@media screen and (min-width: 1270px) and (max-width: 1919px) {
+	.row-fluid {
+		column-count: 2;
+		-webkit-column-count: 2;
+	}
+	.root, .wrapper > .row {
+		display: block;
+		column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+}*/
+@media screen and (max-width: 480px) {
+	body, .description {
+		font-size: 16px;
+		font-weight: normal;
+	}
+	.category-title h2, .heading h3  {
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.heading h3, .title, .heading, .price {
+		font-size: 20px;
+	}
+	.heading h3, .heading {
+	font-size: 13px;
+	}
+	.smoothies .processing, .freshpremiumjuices .processing, .extras .processing {
+		display: block;
+		font-size: 12px;
+		column-count: 1;
+		-webkit-column-count: 1;
+	}
+	.root {
+		padding: 4px 0;
+	}
+}
+
+.flip {
+	padding-top: 0 !important;
+	width: 1080px;
+}
+.flip .container-fluid {
+	padding: 0;
+	height: 1920px;
+	position: absolute;
+}
+.flip .row-fluid {
+	padding: 0 !important;
+}
+.fullscreen {
+	position: fixed !important;
+	top: 0;
+	z-index: 9998 !important;
+}
+.fullscreen .cycle-caption {
+	display: none;
+}

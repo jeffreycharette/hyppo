@@ -284,6 +284,73 @@ exports.edit_page = function(doc, req) {
 	}
 }
 
+exports.dashboard = function(doc, req) {
+	var className = "",
+		typeName = "",
+		wrapper = "",
+		contentType = (typeof req.query.format !== 'undefined') ? req.query.format : 'html',
+		template = (typeof req.query.template !== 'undefined') ? req.query.template : '',
+		header = new RegExp(/<body(.*?)>/gi);
+		
+	if (contentType === 'json') {
+		start({code: 200, headers: {'Content-Type': 'application/json'}});
+	}
+	else if (contentType === 'html') {
+		start({code: 200, headers: {'Content-Type': 'text/html'}});
+	}
+
+	_.each(doc, function(val, key) {
+		if (globalKeys.indexOf(key) === -1) {
+			typeName = (typeof val.type === 'undefined') ? '' : val.type.replace(/ /g,'_');
+			className = (typeof val.options === 'undefined') ? '' : val.options.widget.type.replace('-','_').replace(/ /g,'_');
+			wrapper = '<span class="wc_editable ' + 'wc-' + typeName + '-' + className + '" id="' + doc._id.replace('-','_').replace(/ /g,'_') + '-' + key.replace('-','_').replace(/ /g,'_') + '">';
+			if (typeof val.value === 'object' && className !== "query" && typeName !== "meta") {
+			    doc[key] = _.flatten(val.value);
+			}
+			else if (typeName === "meta") {
+				doc[key] = val.value;
+			}
+			else if (className === "query") {
+				doc[key] = wrapper + '<span class="wc-query">' + JSON.stringify(val.value) + '</span></span>';
+			}
+			else {
+				doc[key] = (className === "partial") ? {template: val.value, type: 'partial', 'wrapper': wrapper} : wrapper + val.value + '</span>';
+			}
+		}
+		else if (key === 'template') {
+			doc[key] = val.value;
+		}
+		else if (key !== 'permissions') {
+			doc[key] = val;
+		}
+		else {
+			//delete doc[key];
+		}
+	});
+	_.each(doc, function(val, key) {
+		if (typeof val === "object") {
+			if (typeof val.type === "string") {
+				doc[key] = (!!val.template) ? val.wrapper + wc.render(val.template, req, doc) + '</span>' : val.wrapper + val.template + '</span>';
+			}
+		}
+	});
+	
+	/* validate document access */
+	doc['template'] = "dashboard.html";
+	if (!!doc.permissions.owner) {
+		if ( doc.permissions.owner === 'member' && req.userCtx.roles.indexOf('member') === -1 ) {
+			doc['template'] = "wc-login.html";
+			contentType = "html";
+		}
+		log(req);
+		doc['owner'] = req.userCtx.name;
+		doc['user'] = req;
+		doc['name'] = req.userCtx.first + ' ' + req.userCtx.last;
+	}
+
+	return wc.render(doc.template || "404.html", req, doc);
+}
+
 exports.edit_definition = function (doc, req) {
 	var messages = "";
 	var i = 0;

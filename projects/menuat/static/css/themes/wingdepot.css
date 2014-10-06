@@ -1,0 +1,322 @@
+/* ~~~~~ main ~~~~~ */
+body {
+	margin:0;
+}
+.container {
+	max-width:1080px;
+	max-height:1920px;
+	overflow:hidden;
+}
+.header {
+	background-image: url('/img/wingdepot/top.png');
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 488px;
+	z-index: 500;
+	background-repeat: no-repeat;
+}
+.content > img, .content > span {
+	position:fixed;
+	z-index: 450;
+}
+.footer {
+	position:fixed;
+	bottom: 0;
+    left: 0;
+    right: 0;
+	z-index: 400;
+}
+.footer > img {
+	height:1008px;
+}
+.bg {
+	position:fixed;
+	top: 290px;
+    left: 0;
+    right: 0;
+	z-index: 399;
+}
+.spacer {
+	float:left;
+	width:100%;
+	height:40px;
+}
+
+/* ~~~~~ slideshow ~~~~~ */
+#slideshow { 
+    position: relative; 
+}
+
+#slideshow div.slide { 
+    position: absolute; 
+}
+
+/* ~~~~~ beer ~~~~~ */
+.extra-beer-1 {
+	top: 1685px;
+	left: 85px;
+}
+.extra-beer-2 {
+	top: 1205px;
+	left: 620px;
+}
+.text-beer {
+	color:#FFF;
+	display:block;
+	text-align:right;
+	text-shadow:3px 3px 3px black;
+	font-family: 'Arvo', serif;
+	font-weight:700;
+	font-size:44px;
+	top: 1460px;
+	right: 400px;
+	line-height: 1.3;
+}
+
+/* ~~~~~ specials ~~~~~ */
+.logo-specials {
+	top: 1100px;
+	left: 320px;
+}
+.specials-container {
+	top:1350px;
+	left:110px;
+	width:890px;
+	position:fixed;
+	display:block;
+	z-index: 450;
+	line-height: 1.5;
+}
+.header-specials, .text-specials {
+	font-family: 'Arvo', serif;
+	text-shadow:3px 3px 3px black;
+}
+.header-specials {
+	color:yellow;
+	font-size: 44px;
+	font-weight: 700;
+	font-style: italic;
+}
+.text-specials {
+	color:#FFF;
+	font-weight: 400;
+	font-size: 40px;
+}
+
+/* ~~~~~ shooters ~~~~~ */
+.logo-shooters {
+	top: 1105px;
+	left: 60px;
+}
+.text-shooters-left, .text-shooters-right {
+	display:none;
+	color: #FFF;
+	top:1400px;
+	position:fixed;
+	line-height: 2;
+	font-size: 75px;
+	font-weight: 700;
+	font-family: 'Economica', sans-serif;
+	text-transform:uppercase;
+}
+.text-shooters-left {
+	left: 60px;
+	display:block;
+	text-align:left;
+}
+.text-shooters-right {
+	right: 60px;
+	display:block;
+	text-align:right;
+}
+
+/* ~~~~~ sunday ~~~~~ */
+.logo-sunday {
+	top: 1375px;
+	left: 600px;
+}
+.sunday-container {
+	top: 1475px;
+	left: 80px;
+	position:fixed;
+	display:block;
+	z-index: 450;
+}
+.header-sunday, .text-sunday {
+	float:left;
+	color: #FFF;
+	line-height:1.3;
+	font-weight:700;
+	font-family: 'Arvo', serif;
+	text-transform:uppercase;
+	text-shadow:3px 3px 3px black;
+}
+.header-sunday {
+	width:500px;
+	font-size: 40px;
+}
+.text-sunday {
+	font-size: 50px;
+}
+
+/* ~~~~~ happy ~~~~~ */
+.logo-happy {
+	top: 1085px;
+	left: 565px;
+}
+.happy-img-container {
+	top:1520px;
+	right: 50px;
+	text-align:right;
+	position:fixed;
+	z-index:450;
+}
+.happy-img-container > img {
+	padding-bottom:25px;
+}
+.extra-happy-1 {
+	top: 1175px;
+	left: 65px;
+}
+.happy-time {
+	color: #FFF;
+	top: 1385px;
+	left: 112px;
+	position: fixed;
+	z-index: 460;
+	display: block;
+	font-size: 35px;
+	font-weight: 700;
+	font-family: 'Arvo', serif;
+	text-transform: uppercase;
+}
+.prices-container {
+	top:1535px;
+	position:fixed;
+	z-index:460;
+}
+.prices-happy-1, .prices-happy-2, .prices-happy-3 {
+	color: #880f18;
+	display:block;
+	font-size: 55px;
+	font-weight: 700;
+	font-family: 'Arvo', serif;
+	text-transform:uppercase;
+	margin-bottom: 45px;
+}
+.prices-happy-1 {
+	margin-left: 375px;
+}
+.prices-happy-2 {
+	margin-left: 210px;
+}
+.prices-happy-3 {
+	margin-left: 55px;
+}
+.text-container {
+	top:1535px;
+	position:fixed;
+	z-index:460;
+	right:150px;
+}
+.text-happy-1, .text-happy-2, .text-happy-3 {
+	color: #FFF;
+	display:block;
+	font-size: 50px;
+	font-weight: 700;
+	font-family: 'Economica', sans-serif;
+	text-align:right;
+	text-transform:uppercase;
+	margin-bottom: 50px;
+}
+.text-happy-1 {
+	margin-right:240px;
+}
+
+/* ~~~~~ drinks ~~~~~ */
+.logo-drinks {
+	top: 1140px;
+	left: 60px;
+}
+.text-small {
+	display:block;
+	font-size: 60px;
+	line-height: 1;
+	margin-top: -5px;
+	font-style:italic;
+}
+.text-drinks {
+	display:none;
+	color: #FFF;
+	top:1375px;
+	left: 80px;
+	position:fixed;
+	line-height: 1.4;
+	font-size: 75px;
+	font-weight: 700;
+	font-family: 'Economica', sans-serif;
+	text-transform:uppercase;
+	display:block;
+	text-align:left;
+}
+
+/* ~~~~~ 241 ~~~~~ */
+.logo-241 {
+	top: 1060px;
+	left: 636px;
+}
+.container-left {
+	top:1225px;
+	left:26px;
+	text-align:right;
+}
+.container-right {
+	top:1350px;
+	left:462px;
+}
+.container-left, .container-right {
+	position:fixed;
+	z-index:450;
+}
+.container-text {
+	position:absolute;
+	z-index:460;
+	color: #000000;
+	display:block;
+	font-size: 52px;
+	font-weight: 700;
+	font-family: 'Arvo', serif;
+	margin-top:25px;
+	left:110px;
+}
+.container-text > p {
+	padding-bottom:10px;
+}
+.container-right > .container-text {
+	left:60px;
+	text-align:left !important;
+}
+.container-left > .container-text > span {
+	display:block;
+	float:right;
+	clear:right;
+	padding-bottom:180px;
+}
+.container-right > .container-text > span {
+	display:block;
+	padding-bottom:180px;
+}
+.container-left > img {
+	float:right;
+	clear:right;
+	padding-bottom:120px;
+}
+.container-right > img {
+	text-align:left;
+	padding-bottom:120px;
+}
+.extra-241-1, .extra-241-2, .extra-241-3, .extra-241-4, .extra-241-5 {
+	display:block;
+}

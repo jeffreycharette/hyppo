@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+    <ThumbIcon></ThumbIcon>
+    <BigThumbIcon></BigThumbIcon>
+    <ListIcon></ListIcon>
+    <BigListIcon></BigListIcon>
+    <category></category>
+    <autoUpdate>y</autoUpdate>
+    <cpname>Menuat</cpname>
+    <cpauthjs></cpauthjs>
+    <login>n</login>
+    <ver>0.5</ver>
+    <mgrver>1.000</mgrver>
+    <fullwidget>y</fullwidget>
+    <srcctl>y</srcctl>
+    <ticker>n</ticker>
+    <childlock>y</childlock>
+    <audiomute>y</audiomute>
+    <videomute>y</videomute>
+    <dcont>y</dcont>
+    <network>n</network>
+	<ver itemtype="string">0.100</ver>
+	<fullwidget itemtype="boolean">y</fullwidget>
+	<widgetname itemtype="string">Menuat Deploy</widgetname>
+	<description itemtype="string">Basic deploy script for Menuat.</description>
+	<network itemtype="boolean">n</network>
+	<width>1920</width>
+	<height>1080</height>
+    <author>
+        <name>Menuat</name>
+        <email>support@menuat.com</email>
+        <link>http://menuat.com</link>
+        <organization>Menuat - Power to your menu</organization>
+    </author>
+</widget>

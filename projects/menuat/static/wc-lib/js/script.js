@@ -64,13 +64,14 @@ $(function() {
 			success: function (data) {
 				$('.root').hide();
 				$.each(data.rows, function(k, v) {
-					$('#'+v.id).show();
+					$('#'+v.id).fadeIn();
 				});
 				$('.container-fluid').unhighlight();
 				$('.container-fluid').highlight(query);
 			}
 		});
   });
+	$("#search").keyup(function(){$('.container-fluid').unhighlight();$('.root').fadeIn();});
 	
 	/* group start to end elements with div */
 	$('[class*="row_"]').each(function(i){
@@ -133,10 +134,12 @@ $(function() {
 	$.couch.session({
 	    success: function(data) {
 					if (data.userCtx.name) {
-						$('.wrc-user-out').removeClass().addClass('wrc-user-in').text('sign out').fadeIn();
+						$('.wrc-user-out').show();
+						$('.wrc-user-in').hide();
 					}
 					else {
-						$('.wrc-user-out').text('sign in').fadeIn();
+						$('.wrc-user-in').show();
+						$('.wrc-user-out').hide();
 					}
 	    }
 	});
@@ -234,7 +237,8 @@ $(function() {
 		    name: data.username,
 		    password: data.password,
 		    success: function(data) {
-						$('.wrc-user-out').removeClass().addClass('wrc-user-in').text('sign out');
+						$('.wrc-user-out').show();
+						$('.wrc-user-in').hide();
 						$('.modal_close').trigger('click');
 						$('.noty_bar').notify({type: "success", message: "Sign in successful.  Thank you!", delay: 1000}, function() {
 							window.location.reload(true);
@@ -287,10 +291,11 @@ $(function() {
 
 
 	/* logout */
-	$(document).on('click', '.wrc-user-in', function() {
+	$(document).on('click', '.wrc-user-out', function() {
 		$.couch.logout({
 		    success: function(data) {
-						$('.wrc-user-in').removeClass().addClass('wrc-user-out').text('sign in');
+						$('.wrc-user-out').hide();
+						$('.wrc-user-in').show();
 						$('.noty_bar').notify({type: "success", message: "Bye bye!", delay: 1000}, function() {
 							location.reload(true);
 						});
@@ -458,7 +463,7 @@ $(function() {
 							var isChecked = ' checked';
 						}
 					}
-					html += '<br /><label for="hide">hidden</label><input' + isChecked + ' class="ishidden" type="checkbox" value="hide" /></div><a class="remove" href="#" rel="' + k + '"></a></li>';
+					html += '<br /><label for="hide">hidden</label><input' + isChecked + ' class="ishidden" type="checkbox" value="hide" /></div><a class="remove" href="#" rel="' + key + '"></a></li>';
 					i++;
 				});
 				parentCloned.find('.wc-files').html(html);
@@ -541,25 +546,25 @@ window.addEventListener(orientationEvent, function() {
 		if (hash === "menu1" || hash.indexOf("screen") > -1) {
 			setTimeout(function() {
 				window.scrollTo(0, 0);
-			}, 1000);
+			}, 500);
 		}
 		else if (hash === "menu2") {
 			setTimeout(function() {
 				var pos = parseInt($('#position').text());
 				window.scrollTo(pos, 0);
-			}, 1000);
+			}, 500);
 		}
 		else if (hash === "menu3") {
 			setTimeout(function() {
 				var pos = parseInt($('#position').text());
 				window.scrollTo(pos * 2, 0);
-			}, 1000);
+			}, 500);
 		}
 		else if (hash === "menu4") {
 			setTimeout(function() {
 				var pos = parseInt($('#position').text());
 				window.scrollTo(pos * 3, 0);
-			}, 1000);
+			}, 500);
 		}
 }, false);
 
@@ -636,70 +641,72 @@ function query(opts) {
 }
 
 function editor() {
-	$('.wc_editable').each(function(i){
-		$(this).attr('id', $(this).attr('id').replace('.','dot').replace('/','forwardslash'));
-		var el = $(this),
-			eid = el.attr('id'),
-			elm = el,
-			w = el.width(),
-			h = el.height(),
-			mostLeft = 100000,
-			mostTop = 100000,
-			tid = $(this).attr('id').split('-')[0] + '-' + $(this).attr('id').split('-')[1]  + '-modal',
-			image = '<img class="fold" style="border:none;padding:0;margin:0;" src="/static/wc-lib/img/pin.png" />';
+	$('.wc_editable').each(function(i) {
+		if ( $(this).attr('id') ) {
+			$(this).attr('id', $(this).attr('id').replace('.','dot').replace('/','forwardslash'));
+			var el = $(this),
+				eid = el.attr('id'),
+				elm = el,
+				w = el.width(),
+				h = el.height(),
+				mostLeft = 100000,
+				mostTop = 100000,
+				tid = $(this).attr('id').split('-')[0] + '-' + $(this).attr('id').split('-')[1]  + '-modal',
+				image = '<img class="fold" style="border:none;padding:0;margin:0;" src="/static/wc-lib/img/pin.png" />';
 
-		if ($('[href="#' + tid + '"]').length > 0) {
-			return;
-		}
-		if (elm.hasClass('wc_global')) {
-			image = '<img class="fold" style="border:none;padding:0;margin:0;" src="/static/wc-lib/img/fold.png" />';
-		}
+			if ($('[href="#' + tid + '"]').length > 0) {
+				return;
+			}
+			if (elm.hasClass('wc_global')) {
+				image = '<img class="fold" style="border:none;padding:0;margin:0;" src="/static/wc-lib/img/fold.png" />';
+			}
 
-		el.children().each(function(i){
-			if ($(this).position().left < mostLeft) {
-				mostLeft = $(this).position().left;
-				elm = $(this);
-				if (elm.height() > h) {
-					h = elm.height();
+			el.children().each(function(i){
+				if ($(this).position().left < mostLeft) {
+					mostLeft = $(this).position().left;
+					elm = $(this);
+					if (elm.height() > h) {
+						h = elm.height();
+					}
+					if (elm.width() > w) {
+						w = elm.width();
+					}
 				}
-				if (elm.width() > w) {
-					w = elm.width();
-				}
-			}
-		});
-		if (elm.is(':empty')) {
-			elm.before('<a class="leanmodal" href="#' + tid + '">' + image + '</a>');
-		}
-		else {
-			if (elm.hasClass('wc-query')) {
-				elm = elm.parent();
-			}
-			if (elm.prop("tagName") === 'UL') {
+			});
+			if (elm.is(':empty')) {
 				elm.before('<a class="leanmodal" href="#' + tid + '">' + image + '</a>');
 			}
 			else {
-				elm.prepend('<a class="leanmodal" href="#' + tid + '">' + image + '</a>');
+				if (elm.hasClass('wc-query')) {
+					elm = elm.parent();
+				}
+				if (elm.prop("tagName") === 'UL') {
+					elm.before('<a class="leanmodal" href="#' + tid + '">' + image + '</a>');
+				}
+				else {
+					elm.prepend('<a class="leanmodal" href="#' + tid + '">' + image + '</a>');
+				}
 			}
-		}
-		$('body').append('<div class="wc_edit_modal" id="' + tid + '"></div>');
+			$('body').append('<div class="wc_edit_modal" id="' + tid + '"></div>');
 
-		$(this).click(function(e) {
-			if ($(window).height() < 636) {
-				$('#' + tid).html('<a class="modal_close" href="#close"></a><iframe src="/_show/edit/' + $(this).attr('id').split('-')[0].replace('dot','.').replace('forwardslash','/') + '?#id_' + $(this).attr('id').split('-')[1] + '" class="wc_edit_content" style="height: 465px;top:0;"></iframe>');
-			}
-			else {
-				$('#' + tid).html('<a class="modal_close" href="#close"></a><iframe src="/_show/edit/' + $(this).attr('id').split('-')[0].replace('dot','.').replace('forwardslash','/') + '?#id_' + $(this).attr('id').split('-')[1] + '" class="wc_edit_content"></iframe>');
-			}
-			e.preventDefault();
-			$('.modal_close').click(function(e) {
+			$(this).click(function(e) {
+				if ($(window).height() < 636) {
+					$('#' + tid).html('<a class="modal_close" href="#close"></a><iframe src="/_show/edit/' + $(this).attr('id').split('-')[0].replace('dot','.').replace('forwardslash','/') + '?#id_' + $(this).attr('id').split('-')[1] + '" class="wc_edit_content" style="height: 465px;top:0;"></iframe>');
+				}
+				else {
+					$('#' + tid).html('<a class="modal_close" href="#close"></a><iframe src="/_show/edit/' + $(this).attr('id').split('-')[0].replace('dot','.').replace('forwardslash','/') + '?#id_' + $(this).attr('id').split('-')[1] + '" class="wc_edit_content"></iframe>');
+				}
 				e.preventDefault();
-				$('#lean_overlay').click();
+				$('.modal_close').click(function(e) {
+					e.preventDefault();
+					$('#lean_overlay').click();
+				});
+				$('#lean_overlay').click(function(e) {
+					e.preventDefault();
+					//location.reload();
+				});
 			});
-			$('#lean_overlay').click(function(e) {
-				e.preventDefault();
-				//location.reload();
-			});
-		});
+		}	
 	});
 	$('a.leanmodal').leanModal({ top : 30 });
 	$('body').trigger('queryDone');
