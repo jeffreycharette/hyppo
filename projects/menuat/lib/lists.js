@@ -19,6 +19,7 @@ var wc = require('wc/utils'),
 	}
 	
 	exports.query = function(head, req) {
+		log('ok');
 		if (!req.query.key && !req.query.keys) {
 			start({code: 400, headers: {'Content-Type': 'text/html'}})
 			return '';
@@ -85,6 +86,7 @@ var wc = require('wc/utils'),
 				return v.doc.stock.value > 0;
 			});
 		}
+		log('ok 1');
 
 		/* sort here because we cannot sort in couch by type and an arbitrary key */
 		//issue when sort is left blank
@@ -114,7 +116,7 @@ var wc = require('wc/utils'),
 				}*/
 			});
 		}
-		
+		log('ok 2');
 		/* limit items here because couch will not work with sort and may leave out docs */
 		if (isNumber(limit)) {
 			var cnt = doc.length;
@@ -152,16 +154,18 @@ var wc = require('wc/utils'),
 				}
 			});
 		}
-		
+		log('love it');
 		if (!!exclude) {
+			log('made it');
 			if (!!excludeValue) {
 				doc = _.filter(doc, function(v, k) {
+					log('test ' + excludeValue + v.doc[exclude].value);
 					return v.doc[exclude].value !== excludeValue;
 				});
 			}
 			else {
 				doc = _.filter(doc, function(v, k) {
-					return typeof v.doc[exclude] !== 'undefined';
+					return typeof v.doc[exclude] === 'undefined';
 				});
 			}
 		}

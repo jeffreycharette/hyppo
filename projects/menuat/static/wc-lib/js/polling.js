@@ -49,13 +49,21 @@ else {
 //need to make this scale up to X screens or menus
 //need to hide only attribute screen elements that do not contain specific number not including elements where screen attribute not included
 $('body').bind('queryDone', function() {
+	$('.menuat-slideshow').slick({
+	  dots: false,
+	  infinite: true,
+	  speed: 5000,
+	  fade: true,
+	  slide: '.processing .slide',
+	  cssEase: 'linear'
+	});
 	if (property === 'illy' && window.location.href.indexOf('/edit/') > 0) {
-		$( '.bottom-slideshow .cycle-slideshow' ).cycle('destroy');
-		$( '.cycle-sentinel' ).remove();
-		$( '.cycle-caption, .bottom-slideshow, .fullscreen' ).attr('style', function(i,s) { return 'position: static !important;' });
+		//$( '.bottom-slideshow .cycle-slideshow' ).cycle('destroy');
+		//$( '.cycle-sentinel' ).remove();
+		//$( '.cycle-caption, .bottom-slideshow, .fullscreen' ).attr('style', function(i,s) { return 'position: static !important;' });
 	}
 	else {
-		$( '.cycle-slideshow' ).cycle();
+		//$( '.cycle-slideshow' ).cycle();
 	}
 	if (hash.indexOf("menu1") > -1 || hash.indexOf("screen") > -1 ) {
 		if (property === 'staugamp') {
