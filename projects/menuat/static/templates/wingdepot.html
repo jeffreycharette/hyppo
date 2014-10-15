@@ -54,7 +54,7 @@
   <div class="container">
 	<div class="header"></div>
 	
-	<div id="slideshow" class="cycle-slideshow" data-cycle-fx="fadeout" data-cycle-timeout="8000" data-cycle-slides=".slide" data-cycle-next=".slide">
+	<div data-looper="go" class="{{#if effect}}{{effect}} {{/if}}looper category {{classname}}" {{#if transition}}data-interval={{transition}} {{/if}}{{#if speed}}data-speed={{speed}} {{/if}}>
 		{{{items}}}
 	</div>
 	

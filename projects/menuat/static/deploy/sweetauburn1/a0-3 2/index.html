@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Menuat Deploy</title>
+	<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/Main.css">
+	<script type="text/javascript" src="Javascript/Main.js"></script>
+	<script type="text/javascript">
+	var urlParam = function(name) {
+	  var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	  if (results==null){
+	     return null;
+	  }
+	  else{
+	     return results[1] || 0;
+	  }
+	};
+	
+	var client = urlParam('client') || 'deploy',
+		resolution = parseInt(urlParam('resolution')) || 1920,
+		hash = window.location.hash || '',
+		frame = '',
+		retry = window.setInterval(function() {
+			frame = document.getElementById('contents');
+	    if (frame.contentWindow.document.readyState === "complete") {
+				frame.src = 'http://staging.menuat.com/' + client + '?resolution=' + resolution + hash;
+	      window.clearInterval(retry);
+	    }
+	}, 100);
+	</script>
+</head>
+
+<body class="flip" onload="Main.onLoad();">
+	<iframe id="contents" src="http://staging.menuat.com/deploy/" height="1920" width="1080"></iframe>
+</body>
+</html>

@@ -15,6 +15,10 @@
 	<link rel="stylesheet" type="text/css" href="/static/wc-lib/css/base.css" />
 	<link rel="stylesheet" type="text/css" href="/static/css/restaurant.css" />
   <link href="/css/themes/{{theme}}" rel="stylesheet">
+	{{#if font}}<link href="/css/themes/fonts/{{font}}" rel="stylesheet">{{/if}}
+	<style>
+		{{css}}
+	</style>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -37,9 +41,9 @@
 <body style="background: #666666;">
 	<span class="hidden" id="position">{{{position}}}</span>
 	{{#if slideshow}}
-	<div id="bg-slideshow" class="cycle-slideshow auto" data-cycle-progressive="#images" data-cycle-timeout={{transition}} >
-		<img src="{{basePath}}/{{slideshow.0.name}}" />
-		<script id="images" type="text/cycle">[{{#foreach slideshow}}{{#if $first}} {{else}}"<img src='{{basePath}}/{{name}}' />"{{#if $last}} {{else}},{{/if}}{{/if}}{{/foreach}}]</script>
+	<div id="bg-slideshow" class="{{#if effect}}{{effect}}{{else}}xfade{{/if}} looper" {{#if easing}}data-easing="{{easing}}" {{/if}}{{#if transition}}data-interval={{transition}} {{/if}}{{#if speed}}data-speed={{speed}} {{/if}}>
+		{{#if slideshow.0.hidden}} {{else}}<img class="item active" src="{{basePath}}/{{slideshow.0.name}}" />{{/if}}
+		{{#foreach slideshow}}{{#if hidden}} {{else}}{{#if $first}} {{else}}<img class="item" src='{{basePath}}/{{name}}' />{{/if}}{{/if}}{{/foreach}}
 	</div>
 	{{/if}}
 

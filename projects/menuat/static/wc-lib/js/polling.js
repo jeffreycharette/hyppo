@@ -1,6 +1,5 @@
 if (window.EventSource) {
-  var dataId = '',
-		opts = {};
+  var dataId = '';
 	var source = new EventSource("/menuat/_changes?feed=eventsource&limit=2&descending=true"),
   sourceListener = function(e) {
   	var data = JSON.parse(e.data);
@@ -14,12 +13,7 @@ if (window.EventSource) {
 					dataId.fadeOut();
 				}
 				else {
-					opts["elem"] = dataId.parent();
-					opts["query"] = $.parseJSON(opts.elem.attr('data-json'));
-					opts.req = ( $('.wc_editable:first').length > 0 ) ? "/queryedit" : "/query";
-					opts.query["keys"] = JSON.stringify(opts.query["keys"]);
-					opts.query["_"] = +new Date().getTime();
-					query(opts);
+					refreshQuery(dataId.parent());
 					if (property === 'staugamp') {
 						$('.message, #lean_overlay:first').show();
 						$('.message').addClass('animated bounceInDown');
@@ -29,6 +23,16 @@ if (window.EventSource) {
 							}, duration);
 					}
 				}
+			}
+			else {
+				$.getJSON('/menuat/' + data.id, function(doc) {
+					if ( typeof doc.type !== 'undefined' ) {
+						dataId = $( "[data-json*='" + doc.type.replace(',','').replace(' ','').replace(property,'') + "']" );
+						if (dataId.length > 0) {
+							refreshQuery( dataId );
+						}
+					}
+				});
 			}
 		}
   };
@@ -49,18 +53,24 @@ else {
 //need to make this scale up to X screens or menus
 //need to hide only attribute screen elements that do not contain specific number not including elements where screen attribute not included
 $('body').bind('queryDone', function() {
-	$('.menuat-slideshow').slick({
-	  dots: false,
-	  infinite: true,
-	  speed: 5000,
-	  fade: true,
-	  slide: '.processing .slide',
-	  cssEase: 'linear'
+	var slideshow = $('.looper');
+	slideshow.looper({
+		pause: false,
+	  speed: 500,
+		interval: slideshow.attr('data-interval') || 5000
 	});
-	if (property === 'illy' && window.location.href.indexOf('/edit/') > 0) {
-		//$( '.bottom-slideshow .cycle-slideshow' ).cycle('destroy');
+	slideshow.looper('loop');
+	if (window.location.href.indexOf('/edit/') > 0) {
+		//$( '.looper' ).looper('');
 		//$( '.cycle-sentinel' ).remove();
 		//$( '.cycle-caption, .bottom-slideshow, .fullscreen' ).attr('style', function(i,s) { return 'position: static !important;' });
+		if (property !== 'pulp') {
+			$('.processing').children().unwrap();
+		}
+		if (property == 'hungryhowies') {
+			$('.slideshow').css('position','relative');
+			$('.bg-red').hide();
+		}
 	}
 	else {
 		//$( '.cycle-slideshow' ).cycle();
@@ -69,25 +79,25 @@ $('body').bind('queryDone', function() {
 		if (property === 'staugamp') {
 			$('.message, #lean_overlay').hide();
 		}
-		$(".wrapper[screen*='2'], .wrapper[screen*='3'], .wrapper[screen*='4']").hide();
-		$(".wrapper[screen*='1']").show();
+		$("[screen*='2'], [screen*='3'], [screen*='4']").hide();
+		$("[screen*='1']").show();
 		window.scrollTo(0, 0);
 	}
 	else if (hash.indexOf("menu2") > -1) {
-		$(".wrapper[screen*='1'], .wrapper[screen*='3'], .wrapper[screen*='4']").hide();
-		$(".wrapper[screen*='2']").show();
+		$("[screen*='1'], [screen*='3'], [screen*='4']").hide();
+		$("[screen*='2']").show();
 		var pos = parseInt($('#position').text());
 		window.scrollTo(pos, 0);
 	}
 	else if (hash.indexOf("menu3") > -1) {
-		$(".wrapper[screen*='1'], .wrapper[screen*='2'], .wrapper[screen*='4']").hide();
-		$(".wrapper[screen*='3']").show();
+		$("[screen*='1'], [screen*='2'], [screen*='4']").hide();
+		$("[screen*='3']").show();
 		var pos = parseInt($('#position').text());
 		window.scrollTo(pos * 2, 0);
 	}
 	else if (hash.indexOf("menu4") > -1) {
-		$(".wrapper[screen*='1'], .wrapper[screen*='2'], .wrapper[screen*='3']").hide();
-		$(".wrapper[screen*='4']").show();
+		$("[screen*='1'], [screen*='2'], [screen*='3']").hide();
+		$("[screen*='4']").show();
 		var pos = parseInt($('#position').text());
 		window.scrollTo((pos * 3)+5, 0);
 	}
@@ -133,4 +143,13 @@ var checkSave = function(hash) {
 }
 function randomIntFromInterval(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
+}
+function refreshQuery(queryElement) {
+		var opts = {};
+    opts["elem"] = queryElement;
+		opts["query"] = $.parseJSON(opts.elem.attr('data-json'));
+		opts.req = ( $('.wc_editable:first').length > 0 ) ? "/queryedit" : "/query";
+		opts.query["keys"] = JSON.stringify(opts.query["keys"]);
+		opts.query["_"] = +new Date().getTime();
+		query(opts);
 }

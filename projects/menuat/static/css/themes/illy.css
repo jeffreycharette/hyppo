@@ -163,12 +163,6 @@ small {
 	-moz-column-gap: 11px;
 	-webkit-column-gap: 11px;
 }
-.smoothies .processing, .freshpremiumjuices .processing, .extras .processing {
-	display: block;
-	font-size: 14px;
-	column-count: 2;
-	-webkit-column-count: 2;
-}
 .root {padding-top: 5px;}
 .cycle-caption {
 	background: #EA202D;
@@ -185,7 +179,7 @@ small {
 	line-height: 69px;
 }
 .bottom-slideshow {
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	width: auto;
 	left: 0;
@@ -251,12 +245,6 @@ small {
 	.heading h3, .heading {
 	font-size: 13px;
 	}
-	.smoothies .processing, .freshpremiumjuices .processing, .extras .processing {
-		display: block;
-		font-size: 12px;
-		column-count: 1;
-		-webkit-column-count: 1;
-	}
 	.root {
 		padding: 4px 0;
 	}
@@ -278,6 +266,8 @@ small {
 	position: fixed !important;
 	top: 0;
 	z-index: 9998 !important;
+	left: 0 !important;
+	float: none !important;
 }
 .fullscreen .cycle-caption {
 	display: none;

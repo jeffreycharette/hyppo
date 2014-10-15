@@ -229,6 +229,9 @@ small {
 		display: none;
 	}
 }
+.slide {
+	height:1920px;
+}
 @media (max-width: 1919px) {
 	.container-fluid, .container-fluid .row-fluid {
 		padding: 10px !important;

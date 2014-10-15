@@ -58,12 +58,13 @@ section iframe {
 	-webkit-column-gap: 20px !important;
 	min-height: 1000px !important;
 }
-.flip .root, .wrapper > .row {
+.wrapper > .row {
 	display: block !important;
-	column-break-inside: avoid !important;
-	-webkit-column-break-inside: avoid !important;
 }
-.flip .title, .processing > .row {
+.flip .root {
+	display: block;
+}
+.flip .title, .processing > .row, .flip .root, .wrapper > .row {
 	column-break-inside: avoid !important;
 	-webkit-column-break-inside: avoid !important;
 }

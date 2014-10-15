@@ -21,6 +21,7 @@ var designdoc = [
   "static/templates/_category-classes.html",
   "static/templates/_category-description.html",
   "static/templates/_category-feature-2-column.html",
+  "static/templates/_category-image.html",
   "static/templates/_category-logo.html",
   "static/templates/_category-slideshow.html",
   "static/templates/_category.html",
@@ -70,6 +71,7 @@ var designdoc = [
   "static/templates/faq.html",
   "static/templates/form.html",
   "static/templates/hero-static.html",
+  "static/templates/howies.html",
   "static/templates/legend.html",
   "static/templates/index.html",
   "static/templates/menu-columns-scripts.html",
@@ -97,6 +99,7 @@ var designdoc = [
   "static/css/themes/demotwo.css",
   "static/css/themes/dev.css",
   "static/css/themes/fudginnuts.css",
+  "static/css/themes/howies.css",
   "static/css/themes/illy.css",
   "static/css/themes/legend.css",
   "static/css/themes/parchment.css",
@@ -115,9 +118,11 @@ var designdoc = [
   "static/css/themes/fonts/offline-bard.css",
   "static/css/themes/fonts/offline-handwriting.css",
   "static/css/themes/fonts/offline-handwritingbold.css",
+  "static/css/themes/fonts/offline-kaushan-cabin_condensed_sketch.css",
   "static/css/themes/fonts/offline-medula-one_robato-condensed_cabin.css",
   "static/css/themes/fonts/offline-modern.css",
   "static/css/themes/fonts/offline-modern2.css",
+  "static/css/themes/fonts/paytone-one_roboto-condensed_archivo-black.css",
   "static/css/themes/fonts/typekit-museo.css"
 ];
 $('.lookup').each(function(i) {

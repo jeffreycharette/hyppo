@@ -1,6 +1,8 @@
 {{{pin}}}
 <div id="{{_id}}" class="wrapper{{#if hide}} hide{{/if}} bottom-slideshow" screen="{{screen}}">
-	<div class="menuat-slideshow category {{classname}}" data-slides='.slide' data-next='.slide' {{#if easing}} data-speed="{{speed}}"{{/if}}{{#if easing}} data-easing="{{easing}}"{{/if}}{{#if effect}} data-fx="{{effect}}"{{/if}}{{#if transition}} data-timeout={{transition}}{{/if}}>
-	{{{items}}}
+	<div data-looper="go" class="{{#if effect}}{{effect}} {{/if}}looper category {{classname}}" {{#if transition}}data-interval={{transition}} {{/if}}{{#if speed}}data-speed={{speed}} {{/if}}>
+		<div class="looper-inner">
+			{{{items}}}
+		</div>
 	</div>
 </div>

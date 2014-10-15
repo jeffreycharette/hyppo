@@ -75,9 +75,9 @@
   </div>
 	<span class="hidden" id="position">{{{position}}}</span>
 	{{#if slideshow}}
-	<div id="bg-slideshow" class="cycle-slideshow auto" data-cycle-progressive="#images" {{#if easing}}data-cycle-easing="{{easing}}" {{/if}} {{#if effect}}data-cycle-fx="{{effect}}"{{/if}} data-cycle-timeout={{transition}} >
-		{{#if slideshow.0.hidden}} {{else}}<img src="{{basePath}}/{{slideshow.0.name}}" />{{/if}}
-		<script id="images" type="text/cycle">[{{#foreach slideshow}}{{#if hidden}} {{else}}{{#if $first}} {{else}}"<img src='{{basePath}}/{{name}}' />"{{#if $last}} {{else}},{{/if}}{{/if}}{{/if}}{{/foreach}}]</script>
+	<div id="bg-slideshow" class="{{#if effect}}{{effect}}{{else}}xfade{{/if}} looper" {{#if easing}}data-easing="{{easing}}" {{/if}}{{#if transition}}data-interval={{transition}} {{/if}}{{#if speed}}data-speed={{speed}} {{/if}}>
+		{{#if slideshow.0.hidden}} {{else}}<img class="item active" src="{{basePath}}/{{slideshow.0.name}}" />{{/if}}
+		{{#foreach slideshow}}{{#if hidden}} {{else}}{{#if $first}} {{else}}<img class="item" src='{{basePath}}/{{name}}' />{{/if}}{{/if}}{{/foreach}}
 	</div>
 	{{/if}}
 
