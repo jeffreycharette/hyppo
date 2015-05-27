@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+    background: url(http://menuat.com/img/lockscreen/menuat-pattern.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: #333333;
+    font-family: 'Helvetica Neue', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    margin: 50px auto;
+}
+iframe {
+    border:0;
+    padding:0;
+    margin:0;
+    width: 100%;
+    height: 100%;
+}
+.message {
+    border-bottom: none;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f05a30), to(#f01e30));
+    background-image: -webkit-linear-gradient(left, #f05a30, #f01e30);
+    background-image: linear-gradient(to right, #f05a30, #f01e30);
+    color: #ffffff;
+    margin: 50px;
+}
+h1 {
+    font-family: 'Helvetica Neue Condensed Bold', 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.05em;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4);
+}
+h1::before {
+    float: left;
+    margin: -12px 30px 0 0;
+    content: url('http://menuat.com/static/wc-lib/css/images/logo-cream.png');
+}
+p {
+    color: #333333;
+    font-family: 'Helvetica Neue Condensed Bold', 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.05em;
+    margin-bottom: 3px;
+    padding: 30px;
+    background: #F1F3E3;
+}
